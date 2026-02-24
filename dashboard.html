@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard – AERIS User Interface Mockup</title>
+    <meta name="description"
+        content="AERIS dashboard mockups: Student mood logging, Teacher class heatmap, Counselor risk panel, and Admin institutional overview.">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="icon"
+        href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🧠</text></svg>">
+</head>
+
+<body>
+    <nav class="navbar" id="navbar">
+        <div class="container">
+            <a href="index.html" class="navbar-brand">
+                <div class="navbar-logo">🧠</div>AERIS
+            </a>
+            <div class="nav-links" id="navLinks">
+                <a href="index.html">Home</a><a href="product.html">System Design</a><a href="dashboard.html"
+                    class="active">Dashboard</a><a href="technology.html">Technology</a><a
+                    href="security.html">Privacy</a><a href="pricing.html">Pricing</a><a href="about.html">About</a><a
+                    href="branding.html">Brand</a>
+                <div class="nav-cta"><a href="index.html#system-overview" class="btn btn-primary btn-sm">View
+                        Overview</a></div>
+            </div>
+            <div class="nav-toggle" id="navToggle"><span></span><span></span><span></span></div>
+        </div>
+    </nav>
+
+    <section class="section section--dark" style="padding-top:140px;position:relative;">
+        <div class="particles"></div>
+        <div class="container text-center" style="position:relative;z-index:1;">
+            <div class="badge badge--glass" style="margin-bottom:var(--space-6);">User Interface Mockup – Demonstration
+                Purpose</div>
+            <h1 class="reveal" style="margin-bottom:var(--space-6);">Role-Based <span class="gradient-text">Dashboard
+                    Design</span></h1>
+            <p class="section-subtitle reveal"
+                style="margin:0 auto;color:var(--color-gray-300);font-size:var(--font-size-xl);max-width:700px;">
+                Each stakeholder receives a purpose-built interface tailored to their role in the student wellbeing
+                ecosystem.
+            </p>
+        </div>
+    </section>
+
+    <!-- TAB NAVIGATION -->
+    <section class="section">
+        <div class="container">
+            <div class="tabs reveal">
+                <button class="tab-btn active" data-tab="student-panel">🎓 Student</button>
+                <button class="tab-btn" data-tab="teacher-panel">👩‍🏫 Teacher</button>
+                <button class="tab-btn" data-tab="counselor-panel">🧑‍⚕️ Counselor</button>
+                <button class="tab-btn" data-tab="admin-panel">⚙️ Admin</button>
+            </div>
+
+            <!-- STUDENT PANEL -->
+            <div id="student-panel" class="tab-content active">
+                <div class="grid-2" style="align-items:center;gap:var(--space-12);">
+                    <div>
+                        <span class="section-label">Student Panel</span>
+                        <h3 class="section-title">Mood Logging & <span class="gradient-text">Self-Tracking</span></h3>
+                        <p class="section-subtitle" style="margin-bottom:var(--space-6);">A structured interface for
+                            students to log daily emotional state and receive contextual guidance.</p>
+                        <div style="display:flex;flex-direction:column;gap:var(--space-3);">
+                            <div
+                                style="display:flex;align-items:center;gap:var(--space-3);font-size:var(--font-size-sm);">
+                                <span style="color:var(--color-teal);font-weight:700;">→</span> Daily mood entry (text,
+                                emoji, or voice)
+                            </div>
+                            <div
+                                style="display:flex;align-items:center;gap:var(--space-3);font-size:var(--font-size-sm);">
+                                <span style="color:var(--color-teal);font-weight:700;">→</span> Weekly emotional trend
+                                visualization
+                            </div>
+                            <div
+                                style="display:flex;align-items:center;gap:var(--space-3);font-size:var(--font-size-sm);">
+                                <span style="color:var(--color-teal);font-weight:700;">→</span> AI-suggested coping
+                                guidance
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="dashboard-preview">
+                            <div class="dashboard-titlebar">
+                                <div class="dashboard-dot"></div>
+                                <div class="dashboard-dot"></div>
+                                <div class="dashboard-dot"></div><span
+                                    style="margin-left:auto;font-size:var(--font-size-xs);color:var(--color-gray-400);">Student
+                                    Panel – Mockup</span>
+                            </div>
+                            <div style="padding:var(--space-6);">
+                                <div
+                                    style="color:var(--color-white);font-weight:600;font-size:var(--font-size-sm);margin-bottom:var(--space-4);">
+                                    How are you feeling today?</div>
+                                <div
+                                    style="display:flex;gap:var(--space-3);margin-bottom:var(--space-6);justify-content:center;">
+                                    <div
+                                        style="width:44px;height:44px;border-radius:50%;background:rgba(0,191,166,0.15);display:flex;align-items:center;justify-content:center;font-size:1.3rem;">
+                                        😊</div>
+                                    <div
+                                        style="width:44px;height:44px;border-radius:50%;background:rgba(124,92,252,0.15);display:flex;align-items:center;justify-content:center;font-size:1.3rem;border:2px solid var(--color-lavender);">
+                                        😐</div>
+                                    <div
+                                        style="width:44px;height:44px;border-radius:50%;background:rgba(255,179,71,0.15);display:flex;align-items:center;justify-content:center;font-size:1.3rem;">
+                                        😔</div>
+                                    <div
+                                        style="width:44px;height:44px;border-radius:50%;background:rgba(255,107,138,0.15);display:flex;align-items:center;justify-content:center;font-size:1.3rem;">
+                                        😢</div>
+                                    <div
+                                        style="width:44px;height:44px;border-radius:50%;background:rgba(255,68,68,0.15);display:flex;align-items:center;justify-content:center;font-size:1.3rem;">
+                                        😰</div>
+                                </div>
+                                <div
+                                    style="background:rgba(255,255,255,0.04);border-radius:var(--radius-md);padding:var(--space-4);margin-bottom:var(--space-4);">
+                                    <div
+                                        style="font-size:var(--font-size-xs);color:var(--color-gray-400);margin-bottom:var(--space-3);">
+                                        Weekly Emotional Trend</div>
+                                    <div class="mini-chart">
+                                        <div class="mini-chart-bar" style="height:50%;"></div>
+                                        <div class="mini-chart-bar" style="height:70%;"></div>
+                                        <div class="mini-chart-bar" style="height:60%;"></div>
+                                        <div class="mini-chart-bar" style="height:45%;"></div>
+                                        <div class="mini-chart-bar" style="height:80%;"></div>
+                                        <div class="mini-chart-bar" style="height:65%;"></div>
+                                        <div class="mini-chart-bar" style="height:75%;"></div>
+                                    </div>
+                                    <div
+                                        style="display:flex;justify-content:space-between;font-size:var(--font-size-xs);color:var(--color-gray-500);margin-top:var(--space-1);">
+                                        <span>Mon</span><span>Tue</span><span>Wed</span><span>Thu</span><span>Fri</span><span>Sat</span><span>Sun</span>
+                                    </div>
+                                </div>
+                                <div
+                                    style="background:rgba(0,191,166,0.08);border:1px solid rgba(0,191,166,0.15);border-radius:var(--radius-md);padding:var(--space-3);">
+                                    <div style="font-size:var(--font-size-xs);color:var(--color-teal);font-weight:600;">
+                                        Suggested Guidance</div>
+                                    <div
+                                        style="font-size:var(--font-size-xs);color:var(--color-gray-300);margin-top:var(--space-1);">
+                                        Consider a brief relaxation exercise before your next assessment period.</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- TEACHER PANEL -->
+            <div id="teacher-panel" class="tab-content">
+                <div class="grid-2" style="align-items:center;gap:var(--space-12);">
+                    <div>
+                        <span class="section-label">Teacher Panel</span>
+                        <h3 class="section-title">Class-Level <span class="gradient-text">Overview</span></h3>
+                        <p class="section-subtitle" style="margin-bottom:var(--space-6);">Provides teachers with a
+                            class-wide emotional heatmap, alert notifications, and risk summary indicators.</p>
+                        <div style="display:flex;flex-direction:column;gap:var(--space-3);">
+                            <div
+                                style="display:flex;align-items:center;gap:var(--space-3);font-size:var(--font-size-sm);">
+                                <span style="color:var(--color-teal);font-weight:700;">→</span> Class emotional heatmap
+                                visualization
+                            </div>
+                            <div
+                                style="display:flex;align-items:center;gap:var(--space-3);font-size:var(--font-size-sm);">
+                                <span style="color:var(--color-teal);font-weight:700;">→</span> Individual student alert
+                                overview
+                            </div>
+                            <div
+                                style="display:flex;align-items:center;gap:var(--space-3);font-size:var(--font-size-sm);">
+                                <span style="color:var(--color-teal);font-weight:700;">→</span> Risk summary indicators
+                                per section
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="dashboard-preview">
+                            <div class="dashboard-titlebar">
+                                <div class="dashboard-dot"></div>
+                                <div class="dashboard-dot"></div>
+                                <div class="dashboard-dot"></div><span
+                                    style="margin-left:auto;font-size:var(--font-size-xs);color:var(--color-gray-400);">Teacher
+                                    Panel – Mockup</span>
+                            </div>
+                            <div style="padding:var(--space-6);">
+                                <div
+                                    style="display:grid;grid-template-columns:repeat(3,1fr);gap:var(--space-3);margin-bottom:var(--space-6);">
+                                    <div class="dashboard-metric">
+                                        <div class="dashboard-metric-value" style="font-size:var(--font-size-xl);">28
+                                        </div>
+                                        <div class="dashboard-metric-label">Students</div>
+                                    </div>
+                                    <div class="dashboard-metric">
+                                        <div class="dashboard-metric-value"
+                                            style="font-size:var(--font-size-xl);color:var(--color-coral);">3</div>
+                                        <div class="dashboard-metric-label">Flagged</div>
+                                    </div>
+                                    <div class="dashboard-metric">
+                                        <div class="dashboard-metric-value"
+                                            style="font-size:var(--font-size-xl);color:var(--color-teal);">72</div>
+                                        <div class="dashboard-metric-label">Avg. ESS</div>
+                                    </div>
+                                </div>
+                                <div
+                                    style="font-size:var(--font-size-xs);color:var(--color-gray-400);margin-bottom:var(--space-3);">
+                                    Class Heatmap</div>
+                                <div
+                                    style="display:grid;grid-template-columns:repeat(7,1fr);gap:3px;margin-bottom:var(--space-4);">
+                                    <div class="heatmap-cell heat-1" style="aspect-ratio:1;"></div>
+                                    <div class="heatmap-cell heat-2"></div>
+                                    <div class="heatmap-cell heat-1"></div>
+                                    <div class="heatmap-cell heat-3"></div>
+                                    <div class="heatmap-cell heat-1"></div>
+                                    <div class="heatmap-cell heat-5"></div>
+                                    <div class="heatmap-cell heat-2"></div>
+                                    <div class="heatmap-cell heat-1"></div>
+                                    <div class="heatmap-cell heat-7"></div>
+                                    <div class="heatmap-cell heat-2"></div>
+                                    <div class="heatmap-cell heat-1"></div>
+                                    <div class="heatmap-cell heat-4"></div>
+                                    <div class="heatmap-cell heat-1"></div>
+                                    <div class="heatmap-cell heat-3"></div>
+                                    <div class="heatmap-cell heat-2"></div>
+                                    <div class="heatmap-cell heat-1"></div>
+                                    <div class="heatmap-cell heat-6"></div>
+                                    <div class="heatmap-cell heat-1"></div>
+                                    <div class="heatmap-cell heat-2"></div>
+                                    <div class="heatmap-cell heat-1"></div>
+                                    <div class="heatmap-cell heat-3"></div>
+                                    <div class="heatmap-cell heat-1"></div>
+                                    <div class="heatmap-cell heat-2"></div>
+                                    <div class="heatmap-cell heat-1"></div>
+                                    <div class="heatmap-cell heat-3"></div>
+                                    <div class="heatmap-cell heat-5"></div>
+                                    <div class="heatmap-cell heat-1"></div>
+                                    <div class="heatmap-cell heat-2"></div>
+                                </div>
+                                <div
+                                    style="background:rgba(255,107,138,0.1);border:1px solid rgba(255,107,138,0.2);border-radius:var(--radius-md);padding:var(--space-3);">
+                                    <div
+                                        style="font-size:var(--font-size-xs);color:var(--color-coral);font-weight:600;">
+                                        Alert: Student flagged — Risk Score 78</div>
+                                    <div
+                                        style="font-size:var(--font-size-xs);color:var(--color-gray-400);margin-top:2px;">
+                                        Declining trend over 3 consecutive sessions. Check-in recommended.</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- COUNSELOR PANEL -->
+            <div id="counselor-panel" class="tab-content">
+                <div class="grid-2" style="align-items:center;gap:var(--space-12);">
+                    <div>
+                        <span class="section-label">Counselor Panel</span>
+                        <h3 class="section-title">Risk Assessment & <span class="gradient-text">Intervention</span></h3>
+                        <p class="section-subtitle" style="margin-bottom:var(--space-6);">Prioritized high-risk student
+                            list with risk breakdown panel and intervention notes logging.</p>
+                        <div style="display:flex;flex-direction:column;gap:var(--space-3);">
+                            <div
+                                style="display:flex;align-items:center;gap:var(--space-3);font-size:var(--font-size-sm);">
+                                <span style="color:var(--color-teal);font-weight:700;">→</span> High-risk flagged
+                                student queue
+                            </div>
+                            <div
+                                style="display:flex;align-items:center;gap:var(--space-3);font-size:var(--font-size-sm);">
+                                <span style="color:var(--color-teal);font-weight:700;">→</span> Multi-factor risk
+                                breakdown
+                            </div>
+                            <div
+                                style="display:flex;align-items:center;gap:var(--space-3);font-size:var(--font-size-sm);">
+                                <span style="color:var(--color-teal);font-weight:700;">→</span> Intervention notes
+                                logging
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="dashboard-preview">
+                            <div class="dashboard-titlebar">
+                                <div class="dashboard-dot"></div>
+                                <div class="dashboard-dot"></div>
+                                <div class="dashboard-dot"></div><span
+                                    style="margin-left:auto;font-size:var(--font-size-xs);color:var(--color-gray-400);">Counselor
+                                    Panel – Mockup</span>
+                            </div>
+                            <div style="padding:var(--space-6);">
+                                <div
+                                    style="font-size:var(--font-size-xs);color:var(--color-gray-400);margin-bottom:var(--space-4);">
+                                    Flagged Students (3)</div>
+                                <div
+                                    style="display:flex;flex-direction:column;gap:var(--space-3);margin-bottom:var(--space-4);">
+                                    <div
+                                        style="display:flex;align-items:center;gap:var(--space-3);padding:var(--space-3);background:rgba(255,107,138,0.1);border-radius:var(--radius-sm);border-left:3px solid var(--color-coral);">
+                                        <div
+                                            style="width:32px;height:32px;border-radius:50%;background:var(--color-coral);display:flex;align-items:center;justify-content:center;font-size:var(--font-size-xs);color:white;font-weight:700;">
+                                            86</div>
+                                        <div>
+                                            <div
+                                                style="font-size:var(--font-size-xs);color:var(--color-white);font-weight:600;">
+                                                Student A. — Critical</div>
+                                            <div style="font-size:10px;color:var(--color-gray-400);">Mood ↓ | Attendance
+                                                ↓ | Pattern shift</div>
+                                        </div>
+                                    </div>
+                                    <div
+                                        style="display:flex;align-items:center;gap:var(--space-3);padding:var(--space-3);background:rgba(255,179,71,0.1);border-radius:var(--radius-sm);border-left:3px solid var(--color-amber);">
+                                        <div
+                                            style="width:32px;height:32px;border-radius:50%;background:var(--color-amber);display:flex;align-items:center;justify-content:center;font-size:var(--font-size-xs);color:white;font-weight:700;">
+                                            64</div>
+                                        <div>
+                                            <div
+                                                style="font-size:var(--font-size-xs);color:var(--color-white);font-weight:600;">
+                                                Student B. — High</div>
+                                            <div style="font-size:10px;color:var(--color-gray-400);">Mood ↓ | Grades
+                                                stable</div>
+                                        </div>
+                                    </div>
+                                    <div
+                                        style="display:flex;align-items:center;gap:var(--space-3);padding:var(--space-3);background:rgba(255,179,71,0.08);border-radius:var(--radius-sm);border-left:3px solid var(--color-amber);">
+                                        <div
+                                            style="width:32px;height:32px;border-radius:50%;background:var(--color-amber);display:flex;align-items:center;justify-content:center;font-size:var(--font-size-xs);color:white;font-weight:700;">
+                                            58</div>
+                                        <div>
+                                            <div
+                                                style="font-size:var(--font-size-xs);color:var(--color-white);font-weight:600;">
+                                                Student C. — Moderate-High</div>
+                                            <div style="font-size:10px;color:var(--color-gray-400);">Social withdrawal
+                                                pattern</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div
+                                    style="background:rgba(255,255,255,0.04);border-radius:var(--radius-md);padding:var(--space-3);">
+                                    <div
+                                        style="font-size:var(--font-size-xs);color:var(--color-gray-400);margin-bottom:var(--space-2);">
+                                        Intervention Note</div>
+                                    <div
+                                        style="font-size:var(--font-size-xs);color:var(--color-gray-300);padding:var(--space-2);background:rgba(255,255,255,0.04);border-radius:var(--radius-sm);border:1px solid rgba(255,255,255,0.08);font-style:italic;">
+                                        "Counselor session scheduled. Follow-up noted. External referral considered."
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ADMIN PANEL -->
+            <div id="admin-panel" class="tab-content">
+                <div class="grid-2" style="align-items:center;gap:var(--space-12);">
+                    <div>
+                        <span class="section-label">Admin Panel</span>
+                        <h3 class="section-title">Institutional <span class="gradient-text">Overview</span></h3>
+                        <p class="section-subtitle" style="margin-bottom:var(--space-6);">Institution-level emotional
+                            overview with semester trend analysis and exportable summary reports.</p>
+                        <div style="display:flex;flex-direction:column;gap:var(--space-3);">
+                            <div
+                                style="display:flex;align-items:center;gap:var(--space-3);font-size:var(--font-size-sm);">
+                                <span style="color:var(--color-teal);font-weight:700;">→</span> Institutional emotional
+                                overview
+                            </div>
+                            <div
+                                style="display:flex;align-items:center;gap:var(--space-3);font-size:var(--font-size-sm);">
+                                <span style="color:var(--color-teal);font-weight:700;">→</span> Semester trend analysis
+                            </div>
+                            <div
+                                style="display:flex;align-items:center;gap:var(--space-3);font-size:var(--font-size-sm);">
+                                <span style="color:var(--color-teal);font-weight:700;">→</span> Exportable summary
+                                reports
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="dashboard-preview">
+                            <div class="dashboard-titlebar">
+                                <div class="dashboard-dot"></div>
+                                <div class="dashboard-dot"></div>
+                                <div class="dashboard-dot"></div><span
+                                    style="margin-left:auto;font-size:var(--font-size-xs);color:var(--color-gray-400);">Admin
+                                    Panel – Mockup</span>
+                            </div>
+                            <div style="padding:var(--space-6);">
+                                <div
+                                    style="display:grid;grid-template-columns:repeat(3,1fr);gap:var(--space-3);margin-bottom:var(--space-6);">
+                                    <div class="dashboard-metric">
+                                        <div class="dashboard-metric-value" style="font-size:var(--font-size-lg);">450
+                                        </div>
+                                        <div class="dashboard-metric-label">Students</div>
+                                    </div>
+                                    <div class="dashboard-metric">
+                                        <div class="dashboard-metric-value"
+                                            style="font-size:var(--font-size-lg);color:var(--color-teal);">68</div>
+                                        <div class="dashboard-metric-label">Avg. ESS</div>
+                                    </div>
+                                    <div class="dashboard-metric">
+                                        <div class="dashboard-metric-value"
+                                            style="font-size:var(--font-size-lg);color:var(--color-coral);">12</div>
+                                        <div class="dashboard-metric-label">Flagged</div>
+                                    </div>
+                                </div>
+                                <div
+                                    style="background:rgba(255,255,255,0.04);border-radius:var(--radius-md);padding:var(--space-4);">
+                                    <div
+                                        style="font-size:var(--font-size-xs);color:var(--color-gray-400);margin-bottom:var(--space-3);">
+                                        Semester Trend — Avg. Stability Score</div>
+                                    <div class="mini-chart" style="height:50px;">
+                                        <div class="mini-chart-bar"
+                                            style="height:55%;background:var(--color-lavender);"></div>
+                                        <div class="mini-chart-bar"
+                                            style="height:60%;background:var(--color-lavender);"></div>
+                                        <div class="mini-chart-bar"
+                                            style="height:58%;background:var(--color-lavender);"></div>
+                                        <div class="mini-chart-bar" style="height:65%;background:var(--color-teal);">
+                                        </div>
+                                        <div class="mini-chart-bar" style="height:70%;background:var(--color-teal);">
+                                        </div>
+                                        <div class="mini-chart-bar" style="height:68%;background:var(--color-teal);">
+                                        </div>
+                                    </div>
+                                    <div
+                                        style="display:flex;justify-content:space-between;font-size:10px;color:var(--color-gray-500);margin-top:var(--space-1);">
+                                        <span>Sem 1</span><span>Sem 2</span><span>Sem 3</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div>
+                    <div class="footer-brand">
+                        <div class="navbar-logo">🧠</div>AERIS
+                    </div>
+                    <p class="footer-desc">Prototype AI Emotional Risk Prediction System.<br>Developed under Tritthon
+                        2026.<br>Trident Academy of Technology, Bhubaneswar.</p>
+                </div>
+                <div>
+                    <div class="footer-title">System</div>
+                    <div class="footer-links"><a href="product.html">System Design</a><a
+                            href="dashboard.html">Dashboard</a><a href="technology.html">Technology</a></div>
+                </div>
+                <div>
+                    <div class="footer-title">Project</div>
+                    <div class="footer-links"><a href="about.html">About</a><a href="security.html">Privacy</a><a
+                            href="branding.html">Brand</a></div>
+                </div>
+                <div>
+                    <div class="footer-title">Resources</div>
+                    <div class="footer-links"><a href="pricing.html">Pricing Model</a><a
+                            href="index.html#workflow">Workflow</a><a href="index.html#policy">Policy</a></div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <div>© 2026 AERIS – Tritthon 2026 Prototype · Trident Academy of Technology</div>
+                <div><strong>Designed &amp; Developed by Subham Kumar Mallick</strong></div>
+            </div>
+        </div>
+        </div>
+    </footer>
+    <script src="js/main.js"></script>
+</body>
+
+</html>

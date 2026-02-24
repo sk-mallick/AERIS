@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About – AERIS Project, Team RTX &amp; Tritthon 2026</title>
+    <meta name="description"
+        content="AERIS is developed by Team RTX from Trident Academy of Technology as part of Tritthon 2026 Hackathon.">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="icon"
+        href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🧠</text></svg>">
+    <style>
+        /* ============================================
+       TEAM SECTION STYLES — Scoped to About page
+       ============================================ */
+
+        /* Team Card Grid */
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: var(--space-6);
+        }
+
+        .team-card {
+            background: var(--color-white);
+            border: 1px solid var(--color-gray-100);
+            border-radius: var(--radius-xl);
+            overflow: hidden;
+            transition: all 0.4s var(--ease-out);
+        }
+
+        .team-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 48px rgba(0, 0, 0, 0.1);
+            border-color: rgba(124, 92, 252, 0.12);
+        }
+
+        /* 4:5 image ratio */
+        .team-card-image-wrap {
+            position: relative;
+            width: 100%;
+            padding-top: 100%;
+            /* 1:1 square — compact */
+            /* 4:5 ratio */
+            overflow: hidden;
+        }
+
+        .team-card-image-wrap img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s var(--ease-out);
+        }
+
+        .team-card:hover .team-card-image-wrap img {
+            transform: scale(1.04);
+        }
+
+        /* Gradient overlay on bottom */
+        .team-card-image-wrap::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 40%;
+            background: linear-gradient(to top, rgba(0, 0, 0, 0.35), transparent);
+            pointer-events: none;
+        }
+
+        .team-card-info {
+            padding: var(--space-5) var(--space-5) var(--space-6);
+        }
+
+        .team-card-name {
+            font-size: var(--font-size-lg);
+            font-weight: 700;
+            color: var(--color-indigo);
+            margin-bottom: 4px;
+        }
+
+        .team-card-role {
+            font-size: var(--font-size-xs);
+            font-weight: 600;
+            color: var(--color-lavender);
+            text-transform: uppercase;
+            letter-spacing: 0.06em;
+            margin-bottom: var(--space-3);
+        }
+
+        .team-card-desc {
+            font-size: var(--font-size-sm);
+            color: var(--color-gray-500);
+            line-height: 1.6;
+        }
+
+        /* Leader badge */
+        .team-card--leader {
+            border: 2px solid rgba(124, 92, 252, 0.2);
+        }
+
+        .team-card--leader .team-card-info {
+            position: relative;
+        }
+
+        .leader-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 4px;
+            background: rgba(124, 92, 252, 0.08);
+            color: var(--color-lavender);
+            padding: 3px 10px;
+            border-radius: var(--radius-full);
+            font-size: 0.7rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.06em;
+            margin-bottom: var(--space-3);
+        }
+
+        /* Mentor card — distinct style */
+        .mentor-card {
+            display: flex;
+            align-items: center;
+            gap: var(--space-8);
+            padding: var(--space-8);
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .mentor-avatar {
+            width: 120px;
+            height: 120px;
+            border-radius: var(--radius-lg);
+            background: var(--gradient-primary);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: var(--font-size-4xl);
+            color: white;
+            font-weight: 800;
+            flex-shrink: 0;
+        }
+
+        /* Responsive */
+        @media (max-width: 992px) {
+            .team-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 576px) {
+            .team-grid {
+                grid-template-columns: 1fr;
+                max-width: 380px;
+                margin: 0 auto;
+            }
+
+            .mentor-card {
+                flex-direction: column;
+                text-align: center;
+                gap: var(--space-6);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar" id="navbar" role="navigation" aria-label="Main navigation">
+        <div class="container">
+            <a href="index.html" class="navbar-brand">
+                <div class="navbar-logo">🧠</div>AERIS
+            </a>
+            <div class="nav-links" id="navLinks">
+                <a href="index.html">Home</a>
+                <a href="product.html">System Design</a>
+                <a href="dashboard.html">Dashboard</a>
+                <a href="technology.html">Technology</a>
+                <a href="security.html">Privacy</a>
+                <a href="pricing.html">Pricing</a>
+                <a href="about.html" class="active">About</a>
+                <a href="branding.html">Brand</a>
+                <div class="nav-cta"><a href="index.html#system-overview" class="btn btn-primary btn-sm">View Overview
+                        <span class="btn-arrow">→</span></a></div>
+            </div>
+            <div class="nav-toggle" id="navToggle" aria-label="Toggle navigation" tabindex="0">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- HERO -->
+    <section class="section section--dark" style="padding-top: 140px; position: relative;">
+        <div class="particles"></div>
+        <div class="container text-center" style="position: relative; z-index: 1;">
+            <div class="badge badge--glass reveal" style="margin-bottom: var(--space-6);">About the Project</div>
+            <h1 class="reveal" style="margin-bottom: var(--space-6);">About <span class="gradient-text">AERIS</span>
+            </h1>
+            <p class="section-subtitle reveal" style="margin: 0 auto; color: var(--color-gray-300);">
+                Developed by Team RTX from Trident Academy of Technology as part of Tritthon 2026 Hackathon.
+            </p>
+        </div>
+    </section>
+
+    <!-- PROJECT CONTEXT -->
+    <section class="section" id="about-project">
+        <div class="container">
+            <div class="grid-2" style="align-items: center; gap: var(--space-16);">
+                <div class="reveal-left">
+                    <span class="section-label">The Project</span>
+                    <h2 class="section-title">An AI-Based Approach to <span class="gradient-text">Student
+                            Wellbeing</span></h2>
+                    <p
+                        style="color: var(--color-gray-500); line-height: 1.8; margin-bottom: var(--space-5); max-width: 700px;">
+                        <strong>AERIS</strong> (AI Emotional Risk Prediction &amp; Intervention System) is a prototype
+                        framework designed to assist educational institutions in identifying emotional distress patterns
+                        among students.
+                    </p>
+                    <p
+                        style="color: var(--color-gray-500); line-height: 1.8; margin-bottom: var(--space-5); max-width: 700px;">
+                        The system integrates NLP-based emotion classification, LSTM temporal modeling, and XGBoost risk
+                        scoring with academic contextual data to generate structured risk assessments.
+                    </p>
+                    <p style="color: var(--color-gray-500); line-height: 1.8; max-width: 700px;">
+                        AERIS was developed as part of <strong>Tritthon 2026</strong>, a 24-hour non-stop hackathon
+                        organized by Trident Academy of Technology under the theme of innovative AI/ML solutions for
+                        education and healthcare.
+                    </p>
+                </div>
+                <div class="reveal-right" style="display: flex; justify-content: center;">
+                    <div
+                        style="background: var(--gradient-hero); border-radius: var(--radius-2xl); padding: var(--space-10); max-width: 380px; text-align: center; border: 1px solid rgba(255,255,255,0.06);">
+                        <div style="font-size: 3rem; margin-bottom: var(--space-4);">🎯</div>
+                        <h4 style="color: var(--color-white); margin-bottom: var(--space-4);">Vision Statement</h4>
+                        <p
+                            style="color: var(--color-gray-200); font-size: var(--font-size-lg); font-style: italic; line-height: 1.8;">
+                            "To build a structured AI-based emotional safety framework for educational institutions."
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- TEAM SECTION -->
+    <section class="section section--tinted" id="team">
+        <div class="container">
+            <div class="text-center" style="margin-bottom: var(--space-12);">
+                <span class="section-label reveal">Team RTX</span>
+                <h2 class="section-title reveal">Meet the <span class="gradient-text">Team</span></h2>
+                <p class="section-subtitle reveal">The team behind AERIS — brought together for Tritthon 2026.</p>
+            </div>
+
+            <div class="team-grid stagger-children">
+
+                <!-- LEADER — Subham Kumar Mallick -->
+                <div class="team-card team-card--leader reveal">
+                    <div class="team-card-image-wrap">
+                        <img src="asset/Subham Kumar Mallick.jpeg" alt="Subham Kumar Mallick" loading="lazy">
+                    </div>
+                    <div class="team-card-info">
+                        <div class="leader-badge">★ Founder &amp; Lead</div>
+                        <div class="team-card-name">Subham Kumar Mallick</div>
+                        <div class="team-card-role">System Architect</div>
+                        <p class="team-card-desc">System architecture, AI model design, and overall concept development.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Tanisha Parida -->
+                <div class="team-card reveal">
+                    <div class="team-card-image-wrap">
+                        <img src="asset/Tanisha Parida.jpeg" alt="Tanisha Parida" loading="lazy">
+                    </div>
+                    <div class="team-card-info">
+                        <div class="team-card-name">Tanisha Parida</div>
+                        <div class="team-card-role">Team Member</div>
+                        <p class="team-card-desc">Research assistance, topic ideation, and documentation support.</p>
+                    </div>
+                </div>
+
+                <!-- Susoobhita Jena -->
+                <div class="team-card reveal">
+                    <div class="team-card-image-wrap">
+                        <img src="asset/Susoobhita Jena.jpeg" alt="Susoobhita Jena" loading="lazy">
+                    </div>
+                    <div class="team-card-info">
+                        <div class="team-card-name">Susoobhita Jena</div>
+                        <div class="team-card-role">Team Member</div>
+                        <p class="team-card-desc">Research assistance, documentation support, and UI review.</p>
+                    </div>
+                </div>
+
+                <!-- Subhasmita Sahoo -->
+                <div class="team-card reveal">
+                    <div class="team-card-image-wrap">
+                        <img src="asset/Subhasmita Sahoo.jpeg" alt="Subhasmita Sahoo" loading="lazy">
+                    </div>
+                    <div class="team-card-info">
+                        <div class="team-card-name">Subhasmita Sahoo</div>
+                        <div class="team-card-role">Team Member</div>
+                        <p class="team-card-desc">Topic ideation, documentation support, and content review.</p>
+                    </div>
+                </div>
+
+                <!-- Snehanjali Patra -->
+                <div class="team-card reveal">
+                    <div class="team-card-image-wrap">
+                        <img src="asset/Snehanjali Patra.jpeg" alt="Snehanjali Patra" loading="lazy">
+                    </div>
+                    <div class="team-card-info">
+                        <div class="team-card-name">Snehanjali Patra</div>
+                        <div class="team-card-role">Team Member</div>
+                        <p class="team-card-desc">Research assistance, topic ideation, and documentation support.</p>
+                    </div>
+                </div>
+
+                <!-- Somya Samal -->
+                <div class="team-card reveal">
+                    <div class="team-card-image-wrap">
+                        <img src="asset/Somya Samal.jpeg" alt="Somya Samal" loading="lazy">
+                    </div>
+                    <div class="team-card-info">
+                        <div class="team-card-name">Somya Samal</div>
+                        <div class="team-card-role">Team Member</div>
+                        <p class="team-card-desc">Documentation support, UI feedback, and content coordination.</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- MENTOR -->
+    <section class="section section--dark" id="mentor">
+        <div class="container">
+            <div class="text-center" style="margin-bottom: var(--space-12);">
+                <span class="section-label reveal" style="color: var(--color-teal);">Faculty Mentor</span>
+                <h2 class="section-title reveal">Project <span class="gradient-text">Mentor</span></h2>
+            </div>
+            <div class="reveal">
+                <div class="card-glass mentor-card">
+                    <img src="asset/Aditya Narayan Das.jpeg" alt="Aditya Narayan Das" loading="lazy"
+                        style="width:200px;height:200px;border-radius:var(--radius-lg);object-fit:cover;flex-shrink:0;">
+                    <div>
+                        <h3 style="color: var(--color-white); margin-bottom: var(--space-2);">Aditya Narayan Das</h3>
+                        <div
+                            style="font-size: var(--font-size-sm); color: var(--color-teal); font-weight: 600; margin-bottom: var(--space-3);">
+                            Faculty Mentor</div>
+                        <p style="font-size: var(--font-size-sm); color: var(--color-gray-400); line-height: 1.75;">
+                            Academic guidance, project mentorship, and strategic direction for the AERIS framework
+                            development.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- TRITTHON CONTEXT -->
+    <section class="section section--tinted" id="tritthon-context">
+        <div class="container">
+            <div class="grid-2" style="align-items: center; gap: var(--space-16);">
+                <div class="reveal-left">
+                    <span class="section-label">Hackathon Context</span>
+                    <h2 class="section-title">Tritthon <span class="gradient-text">2026</span></h2>
+                    <p
+                        style="color: var(--color-gray-500); line-height: 1.8; margin-bottom: var(--space-5); max-width: 700px;">
+                        Tritthon 2026 is a 24-hour non-stop hackathon organized by Trident Academy of Technology,
+                        Bhubaneswar.
+                    </p>
+                    <p style="color: var(--color-gray-500); line-height: 1.8; max-width: 700px;">
+                        The hackathon theme focuses on <strong>"Innovative Improvement in Agriculture, Healthcare,
+                            Environment, Energy, and Education using AI/ML/DL/LLM Technologies."</strong>
+                    </p>
+                    <p
+                        style="color: var(--color-gray-500); line-height: 1.8; margin-top: var(--space-5); max-width: 700px;">
+                        AERIS addresses the education and healthcare intersection — applying AI and machine learning to
+                        proactive student emotional wellbeing monitoring.
+                    </p>
+                </div>
+                <div class="reveal-right" style="display: flex; justify-content: center;">
+                    <div style="text-align: center;">
+                        <div style="font-size: 4rem; margin-bottom: var(--space-4);">🏛️</div>
+                        <h3 style="margin-bottom: var(--space-3);">Trident Academy of Technology</h3>
+                        <p
+                            style="font-size: var(--font-size-sm); color: var(--color-gray-500); margin-bottom: var(--space-6);">
+                            Bhubaneswar, Odisha, India</p>
+                        <div
+                            style="display: inline-flex; gap: var(--space-3); flex-wrap: wrap; justify-content: center;">
+                            <span class="badge">Team RTX</span>
+                            <span class="badge badge--teal">24-Hour Hackathon</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div>
+                    <div class="footer-brand">
+                        <div class="navbar-logo">🧠</div>AERIS
+                    </div>
+                    <p class="footer-desc">Prototype AI Emotional Risk Prediction System.<br>Developed under Tritthon
+                        2026.<br>Trident Academy of Technology, Bhubaneswar.</p>
+                </div>
+                <div>
+                    <div class="footer-title">System</div>
+                    <div class="footer-links"><a href="product.html">System Design</a><a
+                            href="dashboard.html">Dashboard</a><a href="technology.html">Technology</a></div>
+                </div>
+                <div>
+                    <div class="footer-title">Project</div>
+                    <div class="footer-links"><a href="about.html">About</a><a href="security.html">Privacy</a><a
+                            href="branding.html">Brand</a></div>
+                </div>
+                <div>
+                    <div class="footer-title">Resources</div>
+                    <div class="footer-links"><a href="pricing.html">Pricing Model</a><a
+                            href="index.html#workflow">Workflow</a><a href="index.html#policy">Policy</a></div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <div>© 2026 AERIS – Tritthon 2026 Prototype · Trident Academy of Technology</div>
+                <div><strong>Designed &amp; Developed by Subham Kumar Mallick</strong></div>
+            </div>
+        </div>
+    </footer>
+    <script src="js/main.js"></script>
+</body>
+
+</html>

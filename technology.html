@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Technology – AERIS AI & Technical Architecture</title>
+    <meta name="description"
+        content="AERIS technical architecture: BERT/DistilBERT NLP, LSTM temporal modeling, XGBoost risk scoring, Python FastAPI backend, Docker deployment.">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="icon"
+        href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🧠</text></svg>">
+</head>
+
+<body>
+    <nav class="navbar" id="navbar">
+        <div class="container">
+            <a href="index.html" class="navbar-brand">
+                <div class="navbar-logo">🧠</div>AERIS
+            </a>
+            <div class="nav-links" id="navLinks">
+                <a href="index.html">Home</a><a href="product.html">System Design</a><a
+                    href="dashboard.html">Dashboard</a><a href="technology.html" class="active">Technology</a><a
+                    href="security.html">Privacy</a><a href="pricing.html">Pricing</a><a href="about.html">About</a><a
+                    href="branding.html">Brand</a>
+                <div class="nav-cta"><a href="index.html#system-overview" class="btn btn-primary btn-sm">View
+                        Overview</a></div>
+            </div>
+            <div class="nav-toggle" id="navToggle"><span></span><span></span><span></span></div>
+        </div>
+    </nav>
+
+    <section class="section section--dark" style="padding-top:140px;position:relative;">
+        <div class="particles"></div>
+        <div class="container text-center" style="position:relative;z-index:1;">
+            <div class="badge badge--glass" style="margin-bottom:var(--space-6);">Technical Documentation</div>
+            <h1 class="reveal" style="margin-bottom:var(--space-6);">AI & Technical <span
+                    class="gradient-text">Architecture</span></h1>
+            <p class="section-subtitle reveal"
+                style="margin:0 auto;color:var(--color-gray-300);font-size:var(--font-size-xl);max-width:700px;">
+                An overview of the machine learning models and infrastructure components used in the AERIS prototype.
+            </p>
+        </div>
+    </section>
+
+    <!-- BERT / DistilBERT -->
+    <section class="section" id="bert">
+        <div class="container">
+            <div class="grid-2" style="align-items:center;gap:var(--space-16);">
+                <div class="reveal-left">
+                    <div class="badge" style="margin-bottom:var(--space-4);">Natural Language Processing</div>
+                    <h2 class="section-title">BERT / <span class="gradient-text">DistilBERT</span></h2>
+                    <p class="section-subtitle" style="margin-bottom:var(--space-6);">Fine-tuned for academic stress
+                        classification from student text and voice inputs.</p>
+                    <div style="display:flex;flex-direction:column;gap:var(--space-3);">
+                        <div style="display:flex;gap:var(--space-3);"><span
+                                style="color:var(--color-teal);font-weight:700;">→</span><span
+                                style="font-size:var(--font-size-sm);">Contextual emotional classification beyond simple
+                                sentiment</span></div>
+                        <div style="display:flex;gap:var(--space-3);"><span
+                                style="color:var(--color-teal);font-weight:700;">→</span><span
+                                style="font-size:var(--font-size-sm);">Pre-trained on general corpora, fine-tuned for
+                                educational context</span></div>
+                        <div style="display:flex;gap:var(--space-3);"><span
+                                style="color:var(--color-teal);font-weight:700;">→</span><span
+                                style="font-size:var(--font-size-sm);">Multi-class output: anxiety, sadness, stress,
+                                isolation, neutral, positive</span></div>
+                        <div style="display:flex;gap:var(--space-3);"><span
+                                style="color:var(--color-teal);font-weight:700;">→</span><span
+                                style="font-size:var(--font-size-sm);">DistilBERT variant for resource-constrained
+                                deployment</span></div>
+                    </div>
+                </div>
+                <div class="reveal-right">
+                    <div class="dashboard-preview">
+                        <div class="dashboard-titlebar">
+                            <div class="dashboard-dot"></div>
+                            <div class="dashboard-dot"></div>
+                            <div class="dashboard-dot"></div><span
+                                style="margin-left:auto;font-size:var(--font-size-xs);color:var(--color-gray-400);">NLP
+                                Analysis – Demonstration</span>
+                        </div>
+                        <div style="padding:var(--space-6);">
+                            <div
+                                style="font-size:var(--font-size-xs);color:var(--color-gray-400);margin-bottom:var(--space-3);">
+                                Input Text Analysis</div>
+                            <div
+                                style="background:rgba(255,255,255,0.04);border-radius:var(--radius-md);padding:var(--space-4);margin-bottom:var(--space-4);font-size:var(--font-size-sm);color:var(--color-gray-300);font-style:italic;">
+                                "I've been feeling <span
+                                    style="background:rgba(255,107,138,0.2);padding:2px 4px;border-radius:3px;color:var(--color-coral);">overwhelmed</span>
+                                lately. <span
+                                    style="background:rgba(255,179,71,0.2);padding:2px 4px;border-radius:3px;color:var(--color-amber);">Can't
+                                    focus</span> in class..."
+                            </div>
+                            <div style="display:grid;grid-template-columns:repeat(2,1fr);gap:var(--space-3);">
+                                <div
+                                    style="background:rgba(255,255,255,0.04);border-radius:var(--radius-sm);padding:var(--space-3);text-align:center;">
+                                    <div style="font-size:var(--font-size-xs);color:var(--color-gray-400);">Distress
+                                    </div>
+                                    <div
+                                        style="font-size:var(--font-size-lg);font-weight:700;color:var(--color-coral);">
+                                        High</div>
+                                </div>
+                                <div
+                                    style="background:rgba(255,255,255,0.04);border-radius:var(--radius-sm);padding:var(--space-3);text-align:center;">
+                                    <div style="font-size:var(--font-size-xs);color:var(--color-gray-400);">Anxiety
+                                    </div>
+                                    <div
+                                        style="font-size:var(--font-size-lg);font-weight:700;color:var(--color-amber);">
+                                        Moderate</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- LSTM -->
+    <section class="section section--tinted" id="lstm">
+        <div class="container">
+            <div class="grid-2" style="align-items:center;gap:var(--space-16);">
+                <div class="reveal-left" style="order:2;">
+                    <div class="badge badge--teal" style="margin-bottom:var(--space-4);">Temporal Modeling</div>
+                    <h2 class="section-title">LSTM <span class="gradient-text">Networks</span></h2>
+                    <p class="section-subtitle" style="margin-bottom:var(--space-6);">Time-series modeling of emotional
+                        patterns to detect trajectory shifts invisible to single-point analysis.</p>
+                    <div style="display:flex;flex-direction:column;gap:var(--space-3);">
+                        <div style="display:flex;gap:var(--space-3);"><span
+                                style="color:var(--color-lavender);font-weight:700;">→</span><span
+                                style="font-size:var(--font-size-sm);">Sequence modeling of mood log patterns over
+                                weeks</span></div>
+                        <div style="display:flex;gap:var(--space-3);"><span
+                                style="color:var(--color-lavender);font-weight:700;">→</span><span
+                                style="font-size:var(--font-size-sm);">Detects gradual emotional decline that snapshots
+                                miss</span></div>
+                        <div style="display:flex;gap:var(--space-3);"><span
+                                style="color:var(--color-lavender);font-weight:700;">→</span><span
+                                style="font-size:var(--font-size-sm);">Memory gates retain long-term behavioral
+                                context</span></div>
+                    </div>
+                </div>
+                <div class="reveal-right" style="order:1;display:flex;justify-content:center;">
+                    <div
+                        style="width:100%;max-width:380px;background:var(--gradient-hero);border-radius:var(--radius-2xl);padding:var(--space-8);">
+                        <div
+                            style="font-size:var(--font-size-xs);color:var(--color-gray-400);margin-bottom:var(--space-4);">
+                            Temporal Sequence – Demonstration</div>
+                        <div
+                            style="display:flex;align-items:flex-end;gap:3px;height:90px;margin-bottom:var(--space-4);">
+                            <div
+                                style="flex:1;height:65%;background:var(--color-teal);border-radius:2px 2px 0 0;opacity:0.7;">
+                            </div>
+                            <div style="flex:1;height:70%;background:var(--color-teal);border-radius:2px 2px 0 0;">
+                            </div>
+                            <div style="flex:1;height:60%;background:var(--color-teal);border-radius:2px 2px 0 0;">
+                            </div>
+                            <div style="flex:1;height:55%;background:var(--color-teal);border-radius:2px 2px 0 0;">
+                            </div>
+                            <div style="flex:1;height:50%;background:var(--color-amber);border-radius:2px 2px 0 0;">
+                            </div>
+                            <div style="flex:1;height:45%;background:var(--color-amber);border-radius:2px 2px 0 0;">
+                            </div>
+                            <div style="flex:1;height:40%;background:var(--color-amber);border-radius:2px 2px 0 0;">
+                            </div>
+                            <div style="flex:1;height:35%;background:var(--color-coral);border-radius:2px 2px 0 0;">
+                            </div>
+                            <div style="flex:1;height:38%;background:var(--color-coral);border-radius:2px 2px 0 0;">
+                            </div>
+                            <div style="flex:1;height:30%;background:var(--color-coral);border-radius:2px 2px 0 0;">
+                            </div>
+                        </div>
+                        <div
+                            style="background:rgba(255,255,255,0.06);border-radius:var(--radius-sm);padding:var(--space-3);">
+                            <div style="font-size:var(--font-size-xs);color:var(--color-coral);font-weight:600;">Gradual
+                                Decline Pattern Detected</div>
+                            <div style="font-size:10px;color:var(--color-gray-400);margin-top:2px;">LSTM detects
+                                consistent downward trend over time.</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- XGBOOST -->
+    <section class="section" id="xgboost">
+        <div class="container text-center">
+            <div class="badge" style="margin-bottom:var(--space-4);">Risk Classification</div>
+            <h2 class="section-title reveal">XGBoost <span class="gradient-text">Classifier</span></h2>
+            <p class="section-subtitle reveal" style="margin:0 auto var(--space-12);">Structured risk scoring algorithm
+                combining multiple feature dimensions into a single risk probability output (0–100).</p>
+            <div class="grid-3 stagger-children">
+                <div class="card reveal">
+                    <div class="card-icon">📊</div>
+                    <h4 class="card-title">Multi-Factor Input</h4>
+                    <p class="card-text">Combines emotional classification, temporal patterns, and academic context into
+                        a unified risk assessment.</p>
+                </div>
+                <div class="card reveal">
+                    <div class="card-icon">🔍</div>
+                    <h4 class="card-title">Feature Importance</h4>
+                    <p class="card-text">Provides transparent feature importance rankings showing contributing factors
+                        for each assessment.</p>
+                </div>
+                <div class="card reveal">
+                    <div class="card-icon">⚡</div>
+                    <h4 class="card-title">Efficient Inference</h4>
+                    <p class="card-text">Gradient boosting architecture enables efficient computation suitable for
+                        real-time scoring.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- BACKEND INFRASTRUCTURE -->
+    <section class="section section--dark" id="backend">
+        <div class="container text-center">
+            <span class="section-label reveal" style="color:var(--color-teal);">Infrastructure</span>
+            <h2 class="section-title reveal">Backend & <span class="gradient-text">Deployment</span></h2>
+            <p class="section-subtitle reveal" style="margin:0 auto var(--space-12);color:var(--color-gray-300);">
+                Backend technology stack and deployment model for the AERIS prototype.</p>
+            <div class="grid-2 stagger-children" style="max-width:800px;margin:0 auto;gap:var(--space-8);">
+                <div class="card-glass reveal" style="text-align:left;">
+                    <h4 style="color:var(--color-white);margin-bottom:var(--space-4);">Backend Stack</h4>
+                    <div style="display:flex;flex-direction:column;gap:var(--space-3);">
+                        <div style="display:flex;align-items:center;gap:var(--space-3);">
+                            <div
+                                style="width:36px;height:36px;border-radius:var(--radius-sm);background:rgba(0,191,166,0.1);display:flex;align-items:center;justify-content:center;font-size:var(--font-size-sm);flex-shrink:0;">
+                                🐍</div>
+                            <div>
+                                <div style="font-size:var(--font-size-sm);color:var(--color-white);font-weight:600;">
+                                    Python FastAPI</div>
+                                <div style="font-size:var(--font-size-xs);color:var(--color-gray-400);">RESTful API
+                                    framework</div>
+                            </div>
+                        </div>
+                        <div style="display:flex;align-items:center;gap:var(--space-3);">
+                            <div
+                                style="width:36px;height:36px;border-radius:var(--radius-sm);background:rgba(124,92,252,0.1);display:flex;align-items:center;justify-content:center;font-size:var(--font-size-sm);flex-shrink:0;">
+                                🗄️</div>
+                            <div>
+                                <div style="font-size:var(--font-size-sm);color:var(--color-white);font-weight:600;">
+                                    PostgreSQL</div>
+                                <div style="font-size:var(--font-size-xs);color:var(--color-gray-400);">Primary data
+                                    store</div>
+                            </div>
+                        </div>
+                        <div style="display:flex;align-items:center;gap:var(--space-3);">
+                            <div
+                                style="width:36px;height:36px;border-radius:var(--radius-sm);background:rgba(255,107,138,0.1);display:flex;align-items:center;justify-content:center;font-size:var(--font-size-sm);flex-shrink:0;">
+                                ⚡</div>
+                            <div>
+                                <div style="font-size:var(--font-size-sm);color:var(--color-white);font-weight:600;">
+                                    Redis</div>
+                                <div style="font-size:var(--font-size-xs);color:var(--color-gray-400);">Caching &
+                                    session management</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-glass reveal" style="text-align:left;">
+                    <h4 style="color:var(--color-white);margin-bottom:var(--space-4);">Deployment Model</h4>
+                    <div style="display:flex;flex-direction:column;gap:var(--space-3);">
+                        <div style="display:flex;align-items:center;gap:var(--space-3);">
+                            <div
+                                style="width:36px;height:36px;border-radius:var(--radius-sm);background:rgba(0,191,166,0.1);display:flex;align-items:center;justify-content:center;font-size:var(--font-size-sm);flex-shrink:0;">
+                                🐳</div>
+                            <div>
+                                <div style="font-size:var(--font-size-sm);color:var(--color-white);font-weight:600;">
+                                    Dockerized Microservices</div>
+                                <div style="font-size:var(--font-size-xs);color:var(--color-gray-400);">Containerized
+                                    architecture</div>
+                            </div>
+                        </div>
+                        <div style="display:flex;align-items:center;gap:var(--space-3);">
+                            <div
+                                style="width:36px;height:36px;border-radius:var(--radius-sm);background:rgba(124,92,252,0.1);display:flex;align-items:center;justify-content:center;font-size:var(--font-size-sm);flex-shrink:0;">
+                                ☁️</div>
+                            <div>
+                                <div style="font-size:var(--font-size-sm);color:var(--color-white);font-weight:600;">
+                                    Cloud + Edge Compatible</div>
+                                <div style="font-size:var(--font-size-xs);color:var(--color-gray-400);">Flexible
+                                    deployment options</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="reveal"
+                style="margin-top:var(--space-10);padding:var(--space-4);background:rgba(124,92,252,0.06);border:1px solid rgba(124,92,252,0.12);border-radius:var(--radius-md);display:inline-block;">
+                <span style="font-size:var(--font-size-sm);color:var(--color-lavender);font-weight:600;">📌 Current
+                    Stage: Prototype (Hackathon Development)</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div>
+                    <div class="footer-brand">
+                        <div class="navbar-logo">🧠</div>AERIS
+                    </div>
+                    <p class="footer-desc">Prototype AI Emotional Risk Prediction System.<br>Developed under Tritthon
+                        2026.<br>Trident Academy of Technology, Bhubaneswar.</p>
+                </div>
+                <div>
+                    <div class="footer-title">System</div>
+                    <div class="footer-links"><a href="product.html">System Design</a><a
+                            href="dashboard.html">Dashboard</a><a href="technology.html">Technology</a></div>
+                </div>
+                <div>
+                    <div class="footer-title">Project</div>
+                    <div class="footer-links"><a href="about.html">About</a><a href="security.html">Privacy</a><a
+                            href="branding.html">Brand</a></div>
+                </div>
+                <div>
+                    <div class="footer-title">Resources</div>
+                    <div class="footer-links"><a href="pricing.html">Pricing Model</a><a
+                            href="index.html#workflow">Workflow</a><a href="index.html#policy">Policy</a></div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <div>© 2026 AERIS – Tritthon 2026 Prototype · Trident Academy of Technology</div>
+                <div><strong>Designed &amp; Developed by Subham Kumar Mallick</strong></div>
+            </div>
+        </div>
+        </div>
+    </footer>
+    <script src="js/main.js"></script>
+</body>
+
+</html>

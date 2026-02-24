@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AERIS – AI-Based Emotional Risk Prediction for Educational Institutions</title>
+  <meta name="description"
+    content="AERIS is a prototype AI system designed to support early identification of emotional distress among students through structured, privacy-conscious monitoring. Developed under Tritthon 2026.">
+  <meta name="keywords"
+    content="AI in Education, Student mental health AI, Predictive emotional analytics, student wellbeing, NEP 2020">
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="icon"
+    href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🧠</text></svg>">
+</head>
+
+<body>
+
+  <!-- NAVIGATION -->
+  <nav class="navbar" id="navbar">
+    <div class="container">
+      <a href="index.html" class="navbar-brand">
+        <div class="navbar-logo">🧠</div>
+        AERIS
+      </a>
+      <div class="nav-links" id="navLinks">
+        <a href="index.html" class="active">Home</a>
+        <a href="product.html">System Design</a>
+        <a href="dashboard.html">Dashboard</a>
+        <a href="technology.html">Technology</a>
+        <a href="security.html">Privacy</a>
+        <a href="pricing.html">Pricing</a>
+        <a href="about.html">About</a>
+        <a href="branding.html">Brand</a>
+        <div class="nav-cta">
+          <a href="#system-overview" class="btn btn-primary btn-sm">View System Overview</a>
+        </div>
+      </div>
+      <div class="nav-toggle" id="navToggle">
+        <span></span><span></span><span></span>
+      </div>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="section section--dark"
+    style="padding-top: 140px; padding-bottom: 100px; position: relative; min-height: 100vh; display: flex; align-items: center;">
+    <div class="particles"></div>
+    <div class="container text-center" style="position: relative; z-index: 1;">
+      <div class="badge badge--glass" style="margin-bottom: var(--space-6);">
+        Prototype AI System · Tritthon 2026
+      </div>
+      <h1 class="reveal" style="margin-bottom: var(--space-6);">
+        AI-Based Emotional Risk Prediction<br>
+        <span class="gradient-text">for Educational Institutions</span>
+      </h1>
+      <p class="section-subtitle reveal"
+        style="margin: 0 auto var(--space-10); max-width: 740px; color: var(--color-gray-300); font-size: var(--font-size-xl);">
+        AERIS is a prototype AI system designed to support early identification of emotional distress among students
+        through structured, privacy-conscious monitoring.
+      </p>
+      <div class="reveal" style="display: flex; gap: var(--space-4); justify-content: center; flex-wrap: wrap;">
+        <a href="#system-overview" class="btn btn-primary btn-lg">
+          View System Overview
+        </a>
+        <a href="about.html" class="btn btn-secondary btn-lg">
+          About the Project
+        </a>
+      </div>
+      <div class="reveal"
+        style="margin-top: var(--space-12); font-size: var(--font-size-sm); color: var(--color-gray-400); line-height: 1.6;">
+        Developed for <strong style="color: var(--color-gray-300);">Tritthon 2026</strong><br>
+        Trident Academy of Technology, Bhubaneswar
+      </div>
+    </div>
+  </section>
+
+  <!-- THE CONTEXT -->
+  <section class="section section--tinted" id="context">
+    <div class="container">
+      <div class="grid-2" style="align-items: center; gap: var(--space-16);">
+        <div class="reveal-left">
+          <span class="section-label">Institutional Challenge</span>
+          <h2 class="section-title">The Emotional Health Monitoring <span class="gradient-text">Gap in Education</span>
+          </h2>
+          <div style="display: flex; flex-direction: column; gap: var(--space-4); margin-top: var(--space-6);">
+            <div
+              style="display: flex; align-items: flex-start; gap: var(--space-4); padding: var(--space-4); background: rgba(255,107,138,0.06); border-radius: var(--radius-md); border-left: 3px solid var(--color-coral);">
+              <span style="font-size: var(--font-size-xl); flex-shrink: 0;">📊</span>
+              <p style="font-size: var(--font-size-sm); color: var(--color-gray-600); margin: 0;">Academic performance
+                is continuously evaluated across institutions.</p>
+            </div>
+            <div
+              style="display: flex; align-items: flex-start; gap: var(--space-4); padding: var(--space-4); background: rgba(255,179,71,0.06); border-radius: var(--radius-md); border-left: 3px solid var(--color-amber);">
+              <span style="font-size: var(--font-size-xl); flex-shrink: 0;">🧠</span>
+              <p style="font-size: var(--font-size-sm); color: var(--color-gray-600); margin: 0;">Emotional stability
+                remains largely unmeasured in most educational environments.</p>
+            </div>
+            <div
+              style="display: flex; align-items: flex-start; gap: var(--space-4); padding: var(--space-4); background: rgba(124,92,252,0.06); border-radius: var(--radius-md); border-left: 3px solid var(--color-lavender);">
+              <span style="font-size: var(--font-size-xl); flex-shrink: 0;">🔄</span>
+              <p style="font-size: var(--font-size-sm); color: var(--color-gray-600); margin: 0;">Counseling mechanisms
+                are typically reactive rather than preventive.</p>
+            </div>
+            <div
+              style="display: flex; align-items: flex-start; gap: var(--space-4); padding: var(--space-4); background: rgba(0,191,166,0.06); border-radius: var(--radius-md); border-left: 3px solid var(--color-teal);">
+              <span style="font-size: var(--font-size-xl); flex-shrink: 0;">👥</span>
+              <p style="font-size: var(--font-size-sm); color: var(--color-gray-600); margin: 0;">Teachers manage large
+                student groups, making manual emotional tracking impractical.</p>
+            </div>
+          </div>
+        </div>
+        <div class="reveal-right" style="display: flex; justify-content: center;">
+          <div
+            style="width: 100%; max-width: 400px; background: var(--gradient-hero); border-radius: var(--radius-2xl); padding: var(--space-10); position: relative; overflow: hidden;">
+            <div
+              style="position: absolute; top: -50px; right: -50px; width: 150px; height: 150px; border-radius: 50%; background: rgba(124,92,252,0.15);">
+            </div>
+            <div style="position: relative; z-index: 1; text-align: center;">
+              <span style="font-size: 3rem; display: block; margin-bottom: var(--space-6);">📋</span>
+              <div
+                style="font-size: var(--font-size-lg); color: var(--color-gray-200); font-style: italic; line-height: 1.8; margin-bottom: var(--space-6);">
+                "Academic performance is monitored daily.<br><strong style="color: var(--color-teal);">Emotional
+                  stability is not.</strong>"
+              </div>
+              <div style="font-size: var(--font-size-xs); color: var(--color-gray-400);">— The foundational observation
+                behind AERIS</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROPOSED SOLUTION -->
+  <section class="section" id="system-overview">
+    <div class="container text-center">
+      <span class="section-label reveal">Proposed Solution</span>
+      <h2 class="section-title reveal">Introducing <span class="gradient-text">AERIS</span></h2>
+      <p class="section-subtitle reveal" style="margin: 0 auto var(--space-4); max-width: 800px;">
+        AERIS (AI Emotional Risk Prediction & Intervention System) is a prototype AI-driven framework developed to
+        assist institutions in identifying emotional distress patterns through structured mood logging, pattern
+        analysis, and risk scoring mechanisms.
+      </p>
+      <p class="section-subtitle reveal" style="margin: 0 auto var(--space-12); max-width: 800px;">
+        This system is designed for academic environments and integrates contextual factors such as attendance trends
+        and examination cycles.
+      </p>
+      <div class="grid-3 stagger-children">
+        <div class="card reveal">
+          <div class="card-icon">📝</div>
+          <h4 class="card-title">Structured Monitoring</h4>
+          <p class="card-text">Daily mood logging through text, emoji, or voice input — enabling consistent emotional
+            data collection with minimal friction.</p>
+        </div>
+        <div class="card reveal">
+          <div class="card-icon">🔍</div>
+          <h4 class="card-title">Pattern Analysis</h4>
+          <p class="card-text">NLP and temporal modeling identify emotional trajectory shifts that may indicate emerging
+            distress patterns over time.</p>
+        </div>
+        <div class="card reveal">
+          <div class="card-icon">📋</div>
+          <h4 class="card-title">Structured Escalation</h4>
+          <p class="card-text">A 4-level escalation framework routes observations to the appropriate institutional
+            stakeholder based on assessed risk level.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SYSTEM WORKFLOW -->
+  <section class="section section--dark" id="workflow">
+    <div class="container text-center">
+      <span class="section-label reveal" style="color: var(--color-teal);">System Workflow</span>
+      <h2 class="section-title reveal">End-to-End <span class="gradient-text">Processing Pipeline</span></h2>
+      <p class="section-subtitle reveal" style="margin: 0 auto var(--space-16); color: var(--color-gray-300);">
+        A structured 6-step pipeline from student input to institutional review.
+      </p>
+      <div class="grid-3 stagger-children" style="gap: var(--space-6);">
+        <div class="card-glass reveal" style="text-align: left;">
+          <div style="display: flex; align-items: center; gap: var(--space-3); margin-bottom: var(--space-4);">
+            <div
+              style="width: 36px; height: 36px; border-radius: 50%; background: var(--gradient-primary); display: flex; align-items: center; justify-content: center; font-weight: 800; color: white; font-size: var(--font-size-sm); flex-shrink: 0;">
+              1</div>
+            <h5 style="color: var(--color-white); margin: 0;">Student Input</h5>
+          </div>
+          <p style="font-size: var(--font-size-sm); color: var(--color-gray-300);">Student logs daily emotion through
+            text, emoji, or voice input.</p>
+        </div>
+        <div class="card-glass reveal" style="text-align: left;">
+          <div style="display: flex; align-items: center; gap: var(--space-3); margin-bottom: var(--space-4);">
+            <div
+              style="width: 36px; height: 36px; border-radius: 50%; background: var(--gradient-primary); display: flex; align-items: center; justify-content: center; font-weight: 800; color: white; font-size: var(--font-size-sm); flex-shrink: 0;">
+              2</div>
+            <h5 style="color: var(--color-white); margin: 0;">NLP Classification</h5>
+          </div>
+          <p style="font-size: var(--font-size-sm); color: var(--color-gray-300);">NLP engine classifies emotional
+            category from input data.</p>
+        </div>
+        <div class="card-glass reveal" style="text-align: left;">
+          <div style="display: flex; align-items: center; gap: var(--space-3); margin-bottom: var(--space-4);">
+            <div
+              style="width: 36px; height: 36px; border-radius: 50%; background: var(--gradient-primary); display: flex; align-items: center; justify-content: center; font-weight: 800; color: white; font-size: var(--font-size-sm); flex-shrink: 0;">
+              3</div>
+            <h5 style="color: var(--color-white); margin: 0;">Temporal Modeling</h5>
+          </div>
+          <p style="font-size: var(--font-size-sm); color: var(--color-gray-300);">LSTM models emotional patterns over
+            time to detect trajectory shifts.</p>
+        </div>
+        <div class="card-glass reveal" style="text-align: left;">
+          <div style="display: flex; align-items: center; gap: var(--space-3); margin-bottom: var(--space-4);">
+            <div
+              style="width: 36px; height: 36px; border-radius: 50%; background: var(--gradient-primary); display: flex; align-items: center; justify-content: center; font-weight: 800; color: white; font-size: var(--font-size-sm); flex-shrink: 0;">
+              4</div>
+            <h5 style="color: var(--color-white); margin: 0;">Risk Scoring</h5>
+          </div>
+          <p style="font-size: var(--font-size-sm); color: var(--color-gray-300);">Risk engine calculates structured
+            score on a 0–100 scale.</p>
+        </div>
+        <div class="card-glass reveal" style="text-align: left;">
+          <div style="display: flex; align-items: center; gap: var(--space-3); margin-bottom: var(--space-4);">
+            <div
+              style="width: 36px; height: 36px; border-radius: 50%; background: var(--gradient-primary); display: flex; align-items: center; justify-content: center; font-weight: 800; color: white; font-size: var(--font-size-sm); flex-shrink: 0;">
+              5</div>
+            <h5 style="color: var(--color-white); margin: 0;">Escalation Logic</h5>
+          </div>
+          <p style="font-size: var(--font-size-sm); color: var(--color-gray-300);">Escalation logic triggers alerts
+            across 4 levels (L1–L4).</p>
+        </div>
+        <div class="card-glass reveal" style="text-align: left;">
+          <div style="display: flex; align-items: center; gap: var(--space-3); margin-bottom: var(--space-4);">
+            <div
+              style="width: 36px; height: 36px; border-radius: 50%; background: var(--gradient-primary); display: flex; align-items: center; justify-content: center; font-weight: 800; color: white; font-size: var(--font-size-sm); flex-shrink: 0;">
+              6</div>
+            <h5 style="color: var(--color-white); margin: 0;">Dashboard Review</h5>
+          </div>
+          <p style="font-size: var(--font-size-sm); color: var(--color-gray-300);">Dashboard updates for institutional
+            review and action tracking.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CORE ARCHITECTURE -->
+  <section class="section" id="architecture">
+    <div class="container text-center">
+      <span class="section-label reveal">Core Architecture</span>
+      <h2 class="section-title reveal">Technical <span class="gradient-text">Components</span></h2>
+      <p class="section-subtitle reveal" style="margin: 0 auto var(--space-12);">
+        Four integrated layers forming the AERIS prediction pipeline.
+      </p>
+      <div class="grid-4 stagger-children">
+        <div class="card reveal" style="text-align: center;">
+          <div class="card-icon" style="margin: 0 auto var(--space-5);">🤖</div>
+          <h4 class="card-title">NLP Layer</h4>
+          <p class="card-text">BERT / DistilBERT models classify emotional states from text and voice input.</p>
+        </div>
+        <div class="card reveal" style="text-align: center;">
+          <div class="card-icon" style="margin: 0 auto var(--space-5);">🧬</div>
+          <h4 class="card-title">Temporal Modeling</h4>
+          <p class="card-text">LSTM networks detect emotional trajectory shifts across time sequences.</p>
+        </div>
+        <div class="card reveal" style="text-align: center;">
+          <div class="card-icon" style="margin: 0 auto var(--space-5);">📈</div>
+          <h4 class="card-title">Risk Prediction</h4>
+          <p class="card-text">XGBoost classifier outputs structured risk score on a 0–100 scale.</p>
+        </div>
+        <div class="card reveal" style="text-align: center;">
+          <div class="card-icon" style="margin: 0 auto var(--space-5);">📅</div>
+          <h4 class="card-title">Context Fusion</h4>
+          <p class="card-text">Academic context (attendance, GPA, exams) integrated into prediction pipeline.</p>
+        </div>
+      </div>
+      <div class="reveal"
+        style="margin-top: var(--space-8); padding: var(--space-4); background: rgba(124,92,252,0.06); border-radius: var(--radius-md); border: 1px solid rgba(124,92,252,0.12); display: inline-block;">
+        <span style="font-size: var(--font-size-sm); color: var(--color-lavender); font-weight: 600;">📌 Currently in
+          prototype development phase</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- EMOTIONAL HEATMAP PREVIEW -->
+  <section class="section section--dark" id="heatmap-preview">
+    <div class="container text-center">
+      <span class="section-label reveal" style="color: var(--color-teal);">System Preview</span>
+      <h2 class="section-title reveal">Emotional State <span class="gradient-text">Heatmap</span></h2>
+      <p class="section-subtitle reveal" style="margin: 0 auto var(--space-12); color: var(--color-gray-300);">
+        A visual representation of aggregated emotional states across a classroom. Each cell represents a student —
+        hover to interact.
+      </p>
+      <div class="reveal" style="display: inline-block; max-width: 800px; width: 100%;">
+        <div class="heatmap-grid" id="heatmapGrid" style="perspective: 800px;">
+          <!-- Row 1 -->
+          <div class="heatmap-cell heat-1"></div>
+          <div class="heatmap-cell heat-2"></div>
+          <div class="heatmap-cell heat-1"></div>
+          <div class="heatmap-cell heat-3"></div>
+          <div class="heatmap-cell heat-1"></div>
+          <div class="heatmap-cell heat-2"></div>
+          <div class="heatmap-cell heat-4"></div>
+          <div class="heatmap-cell heat-1"></div>
+          <div class="heatmap-cell heat-5"></div>
+          <div class="heatmap-cell heat-2"></div>
+          <div class="heatmap-cell heat-1"></div>
+          <div class="heatmap-cell heat-3"></div>
+          <!-- Row 2 -->
+          <div class="heatmap-cell heat-2"></div>
+          <div class="heatmap-cell heat-7"></div>
+          <div class="heatmap-cell heat-1"></div>
+          <div class="heatmap-cell heat-1"></div>
+          <div class="heatmap-cell heat-3"></div>
+          <div class="heatmap-cell heat-5"></div>
+          <div class="heatmap-cell heat-1"></div>
+          <div class="heatmap-cell heat-2"></div>
+          <div class="heatmap-cell heat-1"></div>
+          <div class="heatmap-cell heat-6"></div>
+          <div class="heatmap-cell heat-2"></div>
+          <div class="heatmap-cell heat-1"></div>
+          <!-- Row 3 -->
+          <div class="heatmap-cell heat-1"></div>
+          <div class="heatmap-cell heat-2"></div>
+          <div class="heatmap-cell heat-4"></div>
+          <div class="heatmap-cell heat-1"></div>
+          <div class="heatmap-cell heat-2"></div>
+          <div class="heatmap-cell heat-1"></div>
+          <div class="heatmap-cell heat-3"></div>
+          <div class="heatmap-cell heat-7"></div>
+          <div class="heatmap-cell heat-2"></div>
+          <div class="heatmap-cell heat-1"></div>
+          <div class="heatmap-cell heat-5"></div>
+          <div class="heatmap-cell heat-1"></div>
+          <!-- Row 4 -->
+          <div class="heatmap-cell heat-3"></div>
+          <div class="heatmap-cell heat-1"></div>
+          <div class="heatmap-cell heat-1"></div>
+          <div class="heatmap-cell heat-6"></div>
+          <div class="heatmap-cell heat-1"></div>
+          <div class="heatmap-cell heat-2"></div>
+          <div class="heatmap-cell heat-1"></div>
+          <div class="heatmap-cell heat-4"></div>
+          <div class="heatmap-cell heat-1"></div>
+          <div class="heatmap-cell heat-3"></div>
+          <div class="heatmap-cell heat-2"></div>
+          <div class="heatmap-cell heat-1"></div>
+          <!-- Row 5 -->
+          <div class="heatmap-cell heat-1"></div>
+          <div class="heatmap-cell heat-5"></div>
+          <div class="heatmap-cell heat-2"></div>
+          <div class="heatmap-cell heat-1"></div>
+          <div class="heatmap-cell heat-3"></div>
+          <div class="heatmap-cell heat-1"></div>
+          <div class="heatmap-cell heat-2"></div>
+          <div class="heatmap-cell heat-1"></div>
+          <div class="heatmap-cell heat-7"></div>
+          <div class="heatmap-cell heat-1"></div>
+          <div class="heatmap-cell heat-4"></div>
+          <div class="heatmap-cell heat-2"></div>
+          <!-- Row 6 -->
+          <div class="heatmap-cell heat-2"></div>
+          <div class="heatmap-cell heat-1"></div>
+          <div class="heatmap-cell heat-3"></div>
+          <div class="heatmap-cell heat-2"></div>
+          <div class="heatmap-cell heat-1"></div>
+          <div class="heatmap-cell heat-5"></div>
+          <div class="heatmap-cell heat-1"></div>
+          <div class="heatmap-cell heat-2"></div>
+          <div class="heatmap-cell heat-6"></div>
+          <div class="heatmap-cell heat-1"></div>
+          <div class="heatmap-cell heat-1"></div>
+          <div class="heatmap-cell heat-3"></div>
+        </div>
+        <!-- Legend -->
+        <div
+          style="display: flex; justify-content: center; gap: var(--space-6); margin-top: var(--space-6); flex-wrap: wrap;">
+          <div style="display: flex; align-items: center; gap: var(--space-2);">
+            <div style="width: 14px; height: 14px; border-radius: 3px; background: #00bfa6; opacity: 0.3;"></div>
+            <span style="font-size: var(--font-size-xs); color: var(--color-gray-400);">Stable</span>
+          </div>
+          <div style="display: flex; align-items: center; gap: var(--space-2);">
+            <div style="width: 14px; height: 14px; border-radius: 3px; background: #00bfa6;"></div>
+            <span style="font-size: var(--font-size-xs); color: var(--color-gray-400);">Good</span>
+          </div>
+          <div style="display: flex; align-items: center; gap: var(--space-2);">
+            <div style="width: 14px; height: 14px; border-radius: 3px; background: #ffb347; opacity: 0.6;"></div>
+            <span style="font-size: var(--font-size-xs); color: var(--color-gray-400);">Watch</span>
+          </div>
+          <div style="display: flex; align-items: center; gap: var(--space-2);">
+            <div style="width: 14px; height: 14px; border-radius: 3px; background: #ffb347;"></div>
+            <span style="font-size: var(--font-size-xs); color: var(--color-gray-400);">Moderate</span>
+          </div>
+          <div style="display: flex; align-items: center; gap: var(--space-2);">
+            <div style="width: 14px; height: 14px; border-radius: 3px; background: #ff6b8a; opacity: 0.6;"></div>
+            <span style="font-size: var(--font-size-xs); color: var(--color-gray-400);">High</span>
+          </div>
+          <div style="display: flex; align-items: center; gap: var(--space-2);">
+            <div style="width: 14px; height: 14px; border-radius: 3px; background: #ff6b8a;"></div>
+            <span style="font-size: var(--font-size-xs); color: var(--color-gray-400);">Critical</span>
+          </div>
+        </div>
+        <div style="margin-top: var(--space-4); font-size: var(--font-size-xs); color: var(--color-gray-500);">
+          Demonstration data — does not represent real student information
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- POLICY ALIGNMENT -->
+  <section class="section section--tinted" id="policy">
+    <div class="container text-center">
+      <span class="section-label reveal">Policy Alignment</span>
+      <h2 class="section-title reveal">Aligned with National <span class="gradient-text">Educational Priorities</span>
+      </h2>
+      <div class="grid-3 stagger-children" style="margin-top: var(--space-12);">
+        <div class="card reveal" style="text-align: center;">
+          <div class="card-icon" style="margin: 0 auto var(--space-5);">📜</div>
+          <h4 class="card-title">NEP 2020</h4>
+          <p class="card-text">National Education Policy 2020 emphasizes holistic student development including
+            emotional and mental wellbeing.</p>
+        </div>
+        <div class="card reveal" style="text-align: center;">
+          <div class="card-icon" style="margin: 0 auto var(--space-5);">🏥</div>
+          <h4 class="card-title">NMHP</h4>
+          <p class="card-text">National Mental Health Programme recognizes the need for early identification and
+            intervention in educational settings.</p>
+        </div>
+        <div class="card reveal" style="text-align: center;">
+          <div class="card-icon" style="margin: 0 auto var(--space-5);">🇮🇳</div>
+          <h4 class="card-title">AI for Bharat</h4>
+          <p class="card-text">Digital India and AI for Bharat initiatives encourage AI-driven solutions for healthcare
+            and education challenges.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TRITTHON -->
+  <section class="section section--dark" id="tritthon">
+    <div class="container">
+      <div class="grid-2" style="align-items: center; gap: var(--space-16);">
+        <div class="reveal-left">
+          <span class="section-label" style="color: var(--color-teal);">Hackathon Context</span>
+          <h2 class="section-title">Developed under <span class="gradient-text">Tritthon 2026</span></h2>
+          <p style="color: var(--color-gray-300); line-height: 1.8; margin-bottom: var(--space-6);">
+            AERIS was developed as part of <strong style="color: var(--color-white);">Tritthon 2026</strong>, a 24-hour
+            non-stop hackathon organized by Trident Academy of Technology under the theme:
+          </p>
+          <div
+            style="padding: var(--space-6); background: var(--glass-bg); border: 1px solid var(--glass-border); border-radius: var(--radius-lg); font-size: var(--font-size-sm); color: var(--color-gray-200); font-style: italic; line-height: 1.8;">
+            "Innovative Improvement in Agriculture, Healthcare, Environment, Energy, and Education using AI/ML/DL/LLM
+            Technologies."
+          </div>
+        </div>
+        <div class="reveal-right" style="display: flex; justify-content: center;">
+          <div style="text-align: center; padding: var(--space-10);">
+            <div style="font-size: 5rem; margin-bottom: var(--space-4);">🏛️</div>
+            <h3 style="color: var(--color-white); margin-bottom: var(--space-3);">Trident Academy of Technology</h3>
+            <p style="color: var(--color-gray-400); font-size: var(--font-size-sm);">Bhubaneswar, Odisha, India</p>
+            <div
+              style="margin-top: var(--space-6); display: inline-block; padding: var(--space-3) var(--space-6); background: var(--glass-bg); border: 1px solid var(--glass-border); border-radius: var(--radius-full); font-size: var(--font-size-sm); font-weight: 600; color: var(--color-teal);">
+              Team RTX
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <div class="footer-brand">
+            <div class="navbar-logo">🧠</div> AERIS
+          </div>
+          <p class="footer-desc">Prototype AI Emotional Risk Prediction System.<br>Developed under Tritthon
+            2026.<br>Trident Academy of Technology, Bhubaneswar.</p>
+        </div>
+        <div>
+          <div class="footer-title">System</div>
+          <div class="footer-links">
+            <a href="product.html">System Design</a>
+            <a href="dashboard.html">Dashboard</a>
+            <a href="technology.html">Technology</a>
+          </div>
+        </div>
+        <div>
+          <div class="footer-title">Project</div>
+          <div class="footer-links">
+            <a href="about.html">About</a>
+            <a href="security.html">Privacy</a>
+            <a href="branding.html">Brand</a>
+          </div>
+        </div>
+        <div>
+          <div class="footer-title">Resources</div>
+          <div class="footer-links">
+            <a href="pricing.html">Pricing Model</a>
+            <a href="#workflow">Workflow</a>
+            <a href="#policy">Policy Alignment</a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div>© 2026 AERIS – Tritthon 2026 Prototype · Trident Academy of Technology</div>
+        <div><strong>Designed &amp; Developed by Subham Kumar Mallick</strong></div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+
+</html>

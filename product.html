@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>System Design – AERIS Functional Architecture</title>
+    <meta name="description"
+        content="AERIS system design: Emotional Stability Score, Risk Score framework, 4-Level Escalation Model, and Academic Context Awareness.">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="icon"
+        href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🧠</text></svg>">
+</head>
+
+<body>
+    <nav class="navbar" id="navbar">
+        <div class="container">
+            <a href="index.html" class="navbar-brand">
+                <div class="navbar-logo">🧠</div>AERIS
+            </a>
+            <div class="nav-links" id="navLinks">
+                <a href="index.html">Home</a><a href="product.html" class="active">System Design</a><a
+                    href="dashboard.html">Dashboard</a><a href="technology.html">Technology</a><a
+                    href="security.html">Privacy</a><a href="pricing.html">Pricing</a><a href="about.html">About</a><a
+                    href="branding.html">Brand</a>
+                <div class="nav-cta"><a href="index.html#system-overview" class="btn btn-primary btn-sm">View
+                        Overview</a></div>
+            </div>
+            <div class="nav-toggle" id="navToggle"><span></span><span></span><span></span></div>
+        </div>
+    </nav>
+
+    <section class="section section--dark" style="padding-top:140px;position:relative;">
+        <div class="particles"></div>
+        <div class="container text-center" style="position:relative;z-index:1;">
+            <div class="badge badge--glass" style="margin-bottom:var(--space-6);">Functional Architecture</div>
+            <h1 class="reveal" style="margin-bottom:var(--space-6);">System Design & <span
+                    class="gradient-text">Functional Architecture</span></h1>
+            <p class="section-subtitle reveal"
+                style="margin:0 auto;color:var(--color-gray-300);font-size:var(--font-size-xl);max-width:700px;">
+                A structured overview of the scoring frameworks, escalation models, and contextual awareness layers
+                within AERIS.
+            </p>
+        </div>
+    </section>
+
+    <!-- EMOTIONAL STABILITY SCORE -->
+    <section class="section" id="stability-score">
+        <div class="container">
+            <div class="grid-2" style="align-items:center;gap:var(--space-16);">
+                <div class="reveal-left">
+                    <span class="section-label">Core Metric</span>
+                    <h2 class="section-title">Emotional Stability <span class="gradient-text">Score (ESS)</span></h2>
+                    <p class="section-subtitle" style="margin-bottom:var(--space-6);">A composite metric scored 0–100,
+                        derived from multiple input signals to provide a holistic view of student emotional state.</p>
+                    <h5 style="margin-bottom:var(--space-4);">Derived From:</h5>
+                    <div style="display:flex;flex-direction:column;gap:var(--space-3);">
+                        <div style="display:flex;gap:var(--space-3);align-items:flex-start;">
+                            <span style="color:var(--color-teal);font-weight:700;flex-shrink:0;">→</span>
+                            <div><strong style="font-size:var(--font-size-sm);">Emotional Classification
+                                    Outputs</strong>
+                                <p style="font-size:var(--font-size-sm);color:var(--color-gray-500);margin:0;">
+                                    NLP-derived emotional category from daily mood entries.</p>
+                            </div>
+                        </div>
+                        <div style="display:flex;gap:var(--space-3);align-items:flex-start;">
+                            <span style="color:var(--color-teal);font-weight:700;flex-shrink:0;">→</span>
+                            <div><strong style="font-size:var(--font-size-sm);">Pattern Volatility</strong>
+                                <p style="font-size:var(--font-size-sm);color:var(--color-gray-500);margin:0;">
+                                    LSTM-derived analysis of emotional variation over time.</p>
+                            </div>
+                        </div>
+                        <div style="display:flex;gap:var(--space-3);align-items:flex-start;">
+                            <span style="color:var(--color-teal);font-weight:700;flex-shrink:0;">→</span>
+                            <div><strong style="font-size:var(--font-size-sm);">Contextual Academic Data</strong>
+                                <p style="font-size:var(--font-size-sm);color:var(--color-gray-500);margin:0;">
+                                    Attendance patterns, GPA variation, and exam schedule correlation.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="reveal-right" style="display:flex;justify-content:center;">
+                    <div style="width:100%;max-width:380px;">
+                        <div class="dashboard-preview">
+                            <div class="dashboard-titlebar">
+                                <div class="dashboard-dot"></div>
+                                <div class="dashboard-dot"></div>
+                                <div class="dashboard-dot"></div><span
+                                    style="margin-left:auto;font-size:var(--font-size-xs);color:var(--color-gray-400);">ESS
+                                    Indicator</span>
+                            </div>
+                            <div style="padding:var(--space-8);text-align:center;">
+                                <div
+                                    style="width:140px;height:140px;margin:0 auto var(--space-6);border-radius:50%;background:conic-gradient(var(--color-teal) 0deg 252deg,rgba(255,255,255,0.06) 252deg 360deg);display:flex;align-items:center;justify-content:center;">
+                                    <div
+                                        style="width:100px;height:100px;border-radius:50%;background:var(--color-indigo-dark);display:flex;align-items:center;justify-content:center;flex-direction:column;">
+                                        <span
+                                            style="font-size:var(--font-size-4xl);font-weight:800;color:var(--color-teal);">72</span>
+                                        <span style="font-size:var(--font-size-xs);color:var(--color-gray-400);">/
+                                            100</span>
+                                    </div>
+                                </div>
+                                <div style="font-size:var(--font-size-sm);color:var(--color-gray-300);">Emotional
+                                    Stability: <strong style="color:var(--color-teal);">Stable</strong></div>
+                                <div
+                                    style="font-size:var(--font-size-xs);color:var(--color-gray-500);margin-top:var(--space-2);">
+                                    Demonstration Value</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- RISK SCORE FRAMEWORK -->
+    <section class="section section--dark" id="risk-score">
+        <div class="container text-center">
+            <span class="section-label reveal" style="color:var(--color-teal);">Risk Assessment</span>
+            <h2 class="section-title reveal">Risk Score <span class="gradient-text">Framework</span></h2>
+            <p class="section-subtitle reveal" style="margin:0 auto var(--space-12);color:var(--color-gray-300);">
+                Structured score indicating probability bands used to support counselor prioritization.</p>
+            <div class="grid-4 stagger-children" style="max-width:1000px;margin:0 auto;">
+                <div class="card-glass reveal" style="text-align:center;">
+                    <div style="font-size:var(--font-size-2xl);font-weight:800;color:var(--color-teal);">0–25</div>
+                    <div
+                        style="font-size:var(--font-size-sm);color:var(--color-teal);font-weight:600;margin-top:var(--space-2);">
+                        Low</div>
+                    <p style="font-size:var(--font-size-xs);color:var(--color-gray-400);margin-top:var(--space-2);">
+                        Normal emotional range. Standard monitoring continues.</p>
+                </div>
+                <div class="card-glass reveal" style="text-align:center;">
+                    <div style="font-size:var(--font-size-2xl);font-weight:800;color:var(--color-amber);">26–50</div>
+                    <div
+                        style="font-size:var(--font-size-sm);color:var(--color-amber);font-weight:600;margin-top:var(--space-2);">
+                        Moderate</div>
+                    <p style="font-size:var(--font-size-xs);color:var(--color-gray-400);margin-top:var(--space-2);">
+                        Patterns emerging. Increased check-ins recommended.</p>
+                </div>
+                <div class="card-glass reveal" style="text-align:center;">
+                    <div style="font-size:var(--font-size-2xl);font-weight:800;color:var(--color-coral);">51–75</div>
+                    <div
+                        style="font-size:var(--font-size-sm);color:var(--color-coral);font-weight:600;margin-top:var(--space-2);">
+                        High</div>
+                    <p style="font-size:var(--font-size-xs);color:var(--color-gray-400);margin-top:var(--space-2);">
+                        Counselor notification is triggered for review.</p>
+                </div>
+                <div class="card-glass reveal" style="text-align:center;">
+                    <div style="font-size:var(--font-size-2xl);font-weight:800;color:#ff4444;">76–100</div>
+                    <div style="font-size:var(--font-size-sm);color:#ff4444;font-weight:600;margin-top:var(--space-2);">
+                        Critical</div>
+                    <p style="font-size:var(--font-size-xs);color:var(--color-gray-400);margin-top:var(--space-2);">
+                        Immediate institutional review and intervention required.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4-LEVEL ESCALATION -->
+    <section class="section" id="escalation">
+        <div class="container">
+            <div class="grid-2" style="align-items:center;gap:var(--space-16);">
+                <div class="reveal-left">
+                    <span class="section-label">Escalation Framework</span>
+                    <h2 class="section-title">4-Level <span class="gradient-text">Escalation Model</span></h2>
+                    <p class="section-subtitle" style="margin-bottom:var(--space-8);">A structured response framework
+                        that routes observations to appropriate institutional stakeholders based on assessed risk level.
+                    </p>
+                </div>
+                <div class="reveal-right">
+                    <div class="escalation-levels">
+                        <div class="escalation-level level-1">
+                            <div class="escalation-number">L1</div>
+                            <div>
+                                <div class="escalation-title">AI Coping Suggestion</div>
+                                <div class="escalation-desc">System generates contextual coping recommendations for the
+                                    student.</div>
+                            </div>
+                        </div>
+                        <div class="escalation-level level-2">
+                            <div class="escalation-number">L2</div>
+                            <div>
+                                <div class="escalation-title">Teacher Notification</div>
+                                <div class="escalation-desc">Assigned teacher receives a structured summary with
+                                    suggested follow-up actions.</div>
+                            </div>
+                        </div>
+                        <div class="escalation-level level-3">
+                            <div class="escalation-number">L3</div>
+                            <div>
+                                <div class="escalation-title">Counselor Alert</div>
+                                <div class="escalation-desc">School counselor is notified with risk breakdown and
+                                    recommended intervention approach.</div>
+                            </div>
+                        </div>
+                        <div class="escalation-level level-4">
+                            <div class="escalation-number">L4</div>
+                            <div>
+                                <div class="escalation-title">Guardian Notification</div>
+                                <div class="escalation-desc">Institution-controlled guardian notification protocol is
+                                    initiated for critical-level cases.</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ACADEMIC CONTEXT -->
+    <section class="section section--tinted" id="academic-context">
+        <div class="container text-center">
+            <span class="section-label reveal">Contextual Awareness</span>
+            <h2 class="section-title reveal">Academic Context <span class="gradient-text">Integration</span></h2>
+            <p class="section-subtitle reveal" style="margin:0 auto var(--space-12);">Risk scoring incorporates academic
+                contextual signals to improve assessment relevance.</p>
+            <div class="grid-4 stagger-children">
+                <div class="card reveal" style="text-align:center;">
+                    <div class="card-icon" style="margin:0 auto var(--space-5);">📅</div>
+                    <h4 class="card-title">Attendance Patterns</h4>
+                    <p class="card-text">Absence frequency and patterns factor into emotional state assessment.</p>
+                </div>
+                <div class="card reveal" style="text-align:center;">
+                    <div class="card-icon" style="margin:0 auto var(--space-5);">📊</div>
+                    <h4 class="card-title">GPA Variation</h4>
+                    <p class="card-text">Grade trends correlated with emotional data for deeper insight.</p>
+                </div>
+                <div class="card reveal" style="text-align:center;">
+                    <div class="card-icon" style="margin:0 auto var(--space-5);">📝</div>
+                    <h4 class="card-title">Exam Schedule</h4>
+                    <p class="card-text">Examination periods factored into baseline emotional calibration.</p>
+                </div>
+                <div class="card reveal" style="text-align:center;">
+                    <div class="card-icon" style="margin:0 auto var(--space-5);">⚠️</div>
+                    <h4 class="card-title">Stress Windows</h4>
+                    <p class="card-text">Academic stress windows identified and weighted in risk scoring.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div>
+                    <div class="footer-brand">
+                        <div class="navbar-logo">🧠</div>AERIS
+                    </div>
+                    <p class="footer-desc">Prototype AI Emotional Risk Prediction System.<br>Developed under Tritthon
+                        2026.<br>Trident Academy of Technology, Bhubaneswar.</p>
+                </div>
+                <div>
+                    <div class="footer-title">System</div>
+                    <div class="footer-links"><a href="product.html">System Design</a><a
+                            href="dashboard.html">Dashboard</a><a href="technology.html">Technology</a></div>
+                </div>
+                <div>
+                    <div class="footer-title">Project</div>
+                    <div class="footer-links"><a href="about.html">About</a><a href="security.html">Privacy</a><a
+                            href="branding.html">Brand</a></div>
+                </div>
+                <div>
+                    <div class="footer-title">Resources</div>
+                    <div class="footer-links"><a href="pricing.html">Pricing Model</a><a
+                            href="index.html#workflow">Workflow</a><a href="index.html#policy">Policy</a></div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <div>© 2026 AERIS – Tritthon 2026 Prototype · Trident Academy of Technology</div>
+                <div><strong>Designed &amp; Developed by Subham Kumar Mallick</strong></div>
+            </div>
+        </div>
+        </div>
+    </footer>
+    <script src="js/main.js"></script>
+</body>
+
+</html>

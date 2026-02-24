@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brand – AERIS Design System Documentation</title>
+    <meta name="description"
+        content="AERIS design system documentation: color palette, typography, visual language for the AERIS prototype system.">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="icon"
+        href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🧠</text></svg>">
+</head>
+
+<body>
+    <nav class="navbar" id="navbar">
+        <div class="container">
+            <a href="index.html" class="navbar-brand">
+                <div class="navbar-logo">🧠</div>AERIS
+            </a>
+            <div class="nav-links" id="navLinks">
+                <a href="index.html">Home</a><a href="product.html">System Design</a><a
+                    href="dashboard.html">Dashboard</a><a href="technology.html">Technology</a><a
+                    href="security.html">Privacy</a><a href="pricing.html">Pricing</a><a href="about.html">About</a><a
+                    href="branding.html" class="active">Brand</a>
+                <div class="nav-cta"><a href="index.html#system-overview" class="btn btn-primary btn-sm">View
+                        Overview</a></div>
+            </div>
+            <div class="nav-toggle" id="navToggle"><span></span><span></span><span></span></div>
+        </div>
+    </nav>
+
+    <section class="section section--dark" style="padding-top:140px;position:relative;">
+        <div class="particles"></div>
+        <div class="container text-center" style="position:relative;z-index:1;">
+            <div class="badge badge--glass" style="margin-bottom:var(--space-6);">Design System</div>
+            <h1 class="reveal" style="margin-bottom:var(--space-6);">AERIS Design <span
+                    class="gradient-text">System</span></h1>
+            <p class="section-subtitle reveal"
+                style="margin:0 auto;color:var(--color-gray-300);font-size:var(--font-size-xl);max-width:700px;">
+                A reference for the visual identity and design tokens used across the AERIS prototype interface.
+            </p>
+        </div>
+    </section>
+
+    <!-- LOGO -->
+    <section class="section" id="logo">
+        <div class="container">
+            <span class="section-label reveal">Logo</span>
+            <h2 class="section-title reveal">Logo <span class="gradient-text">Mark</span></h2>
+            <p class="section-subtitle reveal" style="margin-bottom:var(--space-10);">The AERIS wordmark combines a
+                neural icon with clean sans-serif type.</p>
+            <div class="grid-3 stagger-children">
+                <div class="card reveal" style="text-align:center;padding:var(--space-10);">
+                    <div
+                        style="display:flex;align-items:center;justify-content:center;gap:var(--space-4);margin-bottom:var(--space-6);">
+                        <div
+                            style="width:48px;height:48px;background:var(--gradient-primary);border-radius:var(--radius-md);display:flex;align-items:center;justify-content:center;font-size:var(--font-size-2xl);">
+                            🧠</div>
+                        <span
+                            style="font-size:var(--font-size-2xl);font-weight:800;color:var(--color-indigo);">AERIS</span>
+                    </div>
+                    <div style="font-size:var(--font-size-xs);color:var(--color-gray-400);">Light Background</div>
+                </div>
+                <div class="card reveal"
+                    style="text-align:center;padding:var(--space-10);background:var(--color-indigo);">
+                    <div
+                        style="display:flex;align-items:center;justify-content:center;gap:var(--space-4);margin-bottom:var(--space-6);">
+                        <div
+                            style="width:48px;height:48px;background:var(--gradient-primary);border-radius:var(--radius-md);display:flex;align-items:center;justify-content:center;font-size:var(--font-size-2xl);">
+                            🧠</div>
+                        <span
+                            style="font-size:var(--font-size-2xl);font-weight:800;color:var(--color-white);">AERIS</span>
+                    </div>
+                    <div style="font-size:var(--font-size-xs);color:var(--color-gray-400);">Dark Background</div>
+                </div>
+                <div class="card reveal" style="text-align:center;padding:var(--space-10);">
+                    <div style="display:flex;align-items:center;justify-content:center;margin-bottom:var(--space-6);">
+                        <div
+                            style="width:48px;height:48px;background:var(--gradient-primary);border-radius:var(--radius-md);display:flex;align-items:center;justify-content:center;font-size:var(--font-size-2xl);">
+                            🧠</div>
+                    </div>
+                    <div style="font-size:var(--font-size-xs);color:var(--color-gray-400);">Icon Only</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- COLOR PALETTE -->
+    <section class="section section--tinted" id="colors">
+        <div class="container">
+            <span class="section-label reveal">Color Palette</span>
+            <h2 class="section-title reveal">Brand <span class="gradient-text">Colors</span></h2>
+            <p class="section-subtitle reveal" style="margin-bottom:var(--space-10);">A palette balancing institutional
+                trust (indigo), innovation (teal/lavender), and semantic risk levels (coral/amber).</p>
+            <h4 class="reveal" style="margin-bottom:var(--space-6);">Primary Colors</h4>
+            <div class="grid-4 stagger-children" style="margin-bottom:var(--space-12);">
+                <div class="color-swatch reveal">
+                    <div class="color-swatch-preview" style="background:#1a1a3e;"><span
+                            style="color:white;font-size:var(--font-size-xs);">Primary</span></div>
+                    <div class="color-swatch-info">
+                        <div class="color-swatch-name">Deep Indigo</div>
+                        <div class="color-swatch-hex">#1A1A3E</div>
+                    </div>
+                </div>
+                <div class="color-swatch reveal">
+                    <div class="color-swatch-preview" style="background:#00bfa6;"><span
+                            style="color:white;font-size:var(--font-size-xs);">Accent</span></div>
+                    <div class="color-swatch-info">
+                        <div class="color-swatch-name">AERIS Teal</div>
+                        <div class="color-swatch-hex">#00BFA6</div>
+                    </div>
+                </div>
+                <div class="color-swatch reveal">
+                    <div class="color-swatch-preview" style="background:#7c5cfc;"><span
+                            style="color:white;font-size:var(--font-size-xs);">Accent</span></div>
+                    <div class="color-swatch-info">
+                        <div class="color-swatch-name">Lavender</div>
+                        <div class="color-swatch-hex">#7C5CFC</div>
+                    </div>
+                </div>
+                <div class="color-swatch reveal">
+                    <div class="color-swatch-preview" style="background:linear-gradient(135deg,#7c5cfc,#00bfa6);"><span
+                            style="color:white;font-size:var(--font-size-xs);">Gradient</span></div>
+                    <div class="color-swatch-info">
+                        <div class="color-swatch-name">Primary Gradient</div>
+                        <div class="color-swatch-hex">Lavender → Teal</div>
+                    </div>
+                </div>
+            </div>
+            <h4 class="reveal" style="margin-bottom:var(--space-6);">Semantic Colors (Risk Levels)</h4>
+            <div class="grid-4 stagger-children" style="margin-bottom:var(--space-12);">
+                <div class="color-swatch reveal">
+                    <div class="color-swatch-preview" style="background:#00bfa6;"><span
+                            style="color:white;font-size:var(--font-size-xs);">Low</span></div>
+                    <div class="color-swatch-info">
+                        <div class="color-swatch-name">Safe / Stable</div>
+                        <div class="color-swatch-hex">#00BFA6</div>
+                    </div>
+                </div>
+                <div class="color-swatch reveal">
+                    <div class="color-swatch-preview" style="background:#4fc3f7;"><span
+                            style="color:white;font-size:var(--font-size-xs);">Watch</span></div>
+                    <div class="color-swatch-info">
+                        <div class="color-swatch-name">Sky Blue</div>
+                        <div class="color-swatch-hex">#4FC3F7</div>
+                    </div>
+                </div>
+                <div class="color-swatch reveal">
+                    <div class="color-swatch-preview" style="background:#ffb347;"><span
+                            style="color:white;font-size:var(--font-size-xs);">Moderate</span></div>
+                    <div class="color-swatch-info">
+                        <div class="color-swatch-name">Amber</div>
+                        <div class="color-swatch-hex">#FFB347</div>
+                    </div>
+                </div>
+                <div class="color-swatch reveal">
+                    <div class="color-swatch-preview" style="background:#ff6b8a;"><span
+                            style="color:white;font-size:var(--font-size-xs);">High Risk</span></div>
+                    <div class="color-swatch-info">
+                        <div class="color-swatch-name">Coral</div>
+                        <div class="color-swatch-hex">#FF6B8A</div>
+                    </div>
+                </div>
+            </div>
+            <h4 class="reveal" style="margin-bottom:var(--space-6);">Neutral Colors</h4>
+            <div class="grid-4 stagger-children">
+                <div class="color-swatch reveal">
+                    <div class="color-swatch-preview" style="background:#f0f2f8;"><span
+                            style="font-size:var(--font-size-xs);color:var(--color-gray-500);">Background</span></div>
+                    <div class="color-swatch-info">
+                        <div class="color-swatch-name">Off White</div>
+                        <div class="color-swatch-hex">#F0F2F8</div>
+                    </div>
+                </div>
+                <div class="color-swatch reveal">
+                    <div class="color-swatch-preview" style="background:#d1d5e0;"><span
+                            style="font-size:var(--font-size-xs);color:var(--color-gray-700);">Borders</span></div>
+                    <div class="color-swatch-info">
+                        <div class="color-swatch-name">Gray 200</div>
+                        <div class="color-swatch-hex">#D1D5E0</div>
+                    </div>
+                </div>
+                <div class="color-swatch reveal">
+                    <div class="color-swatch-preview" style="background:#6b7590;"><span
+                            style="color:white;font-size:var(--font-size-xs);">Body Text</span></div>
+                    <div class="color-swatch-info">
+                        <div class="color-swatch-name">Gray 500</div>
+                        <div class="color-swatch-hex">#6B7590</div>
+                    </div>
+                </div>
+                <div class="color-swatch reveal">
+                    <div class="color-swatch-preview" style="background:#0d0f1a;"><span
+                            style="color:white;font-size:var(--font-size-xs);">Dark BG</span></div>
+                    <div class="color-swatch-info">
+                        <div class="color-swatch-name">Near Black</div>
+                        <div class="color-swatch-hex">#0D0F1A</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- TYPOGRAPHY -->
+    <section class="section" id="typography">
+        <div class="container">
+            <span class="section-label reveal">Typography</span>
+            <h2 class="section-title reveal">Type <span class="gradient-text">System</span></h2>
+            <p class="section-subtitle reveal" style="margin-bottom:var(--space-10);">Inter is the primary typeface —
+                clean, geometric, and optimized for screen readability.</p>
+            <div class="grid-2" style="gap:var(--space-8);">
+                <div class="reveal-left">
+                    <div class="card" style="margin-bottom:var(--space-4);">
+                        <div
+                            style="font-size:var(--font-size-5xl);font-weight:800;color:var(--color-indigo);margin-bottom:var(--space-2);">
+                            Aa</div>
+                        <div style="font-size:var(--font-size-2xl);font-weight:700;margin-bottom:var(--space-2);">Inter
+                        </div>
+                        <div style="font-size:var(--font-size-sm);color:var(--color-gray-500);">Primary typeface for all
+                            AERIS interface elements.</div>
+                    </div>
+                </div>
+                <div class="reveal-right">
+                    <div style="display:flex;flex-direction:column;gap:var(--space-4);">
+                        <div class="card" style="padding:var(--space-4);">
+                            <div style="display:flex;justify-content:space-between;align-items:baseline;"><span
+                                    style="font-size:var(--font-size-4xl);font-weight:800;">H1</span><span
+                                    style="font-size:var(--font-size-xs);color:var(--color-gray-400);">3.5rem /
+                                    800</span></div>
+                        </div>
+                        <div class="card" style="padding:var(--space-4);">
+                            <div style="display:flex;justify-content:space-between;align-items:baseline;"><span
+                                    style="font-size:var(--font-size-3xl);font-weight:700;">H2</span><span
+                                    style="font-size:var(--font-size-xs);color:var(--color-gray-400);">2.5rem /
+                                    700</span></div>
+                        </div>
+                        <div class="card" style="padding:var(--space-4);">
+                            <div style="display:flex;justify-content:space-between;align-items:baseline;"><span
+                                    style="font-size:var(--font-size-2xl);font-weight:700;">H3</span><span
+                                    style="font-size:var(--font-size-xs);color:var(--color-gray-400);">2rem / 700</span>
+                            </div>
+                        </div>
+                        <div class="card" style="padding:var(--space-4);">
+                            <div style="display:flex;justify-content:space-between;align-items:baseline;"><span
+                                    style="font-size:var(--font-size-base);font-weight:400;">Body</span><span
+                                    style="font-size:var(--font-size-xs);color:var(--color-gray-400);">1rem / 400</span>
+                            </div>
+                        </div>
+                        <div class="card" style="padding:var(--space-4);">
+                            <div style="display:flex;justify-content:space-between;align-items:baseline;"><span
+                                    style="font-size:var(--font-size-sm);font-weight:600;text-transform:uppercase;letter-spacing:0.08em;">Label</span><span
+                                    style="font-size:var(--font-size-xs);color:var(--color-gray-400);">0.875rem /
+                                    600</span></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- VISUAL LANGUAGE -->
+    <section class="section section--tinted" id="visual-language">
+        <div class="container text-center">
+            <span class="section-label reveal">Visual Language</span>
+            <h2 class="section-title reveal">Interface <span class="gradient-text">Components</span></h2>
+            <p class="section-subtitle reveal" style="margin:0 auto var(--space-12);">Core design patterns used
+                throughout the AERIS interface.</p>
+            <div class="grid-3 stagger-children">
+                <div class="card reveal" style="text-align:center;">
+                    <h4 class="card-title">Glassmorphism Cards</h4>
+                    <p class="card-text">Frosted glass effect for information panels in dark UI sections. Provides depth
+                        and visual hierarchy.</p>
+                </div>
+                <div class="card reveal" style="text-align:center;">
+                    <h4 class="card-title">Data Visualization</h4>
+                    <p class="card-text">Semantic color scale (Teal → Sky → Amber → Coral) used consistently for
+                        risk-level representation.</p>
+                </div>
+                <div class="card reveal" style="text-align:center;">
+                    <h4 class="card-title">Scroll Animations</h4>
+                    <p class="card-text">Subtle reveal animations on scroll for progressive content disclosure. Keeps
+                        interface calm and focused.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div>
+                    <div class="footer-brand">
+                        <div class="navbar-logo">🧠</div>AERIS
+                    </div>
+                    <p class="footer-desc">Prototype AI Emotional Risk Prediction System.<br>Developed under Tritthon
+                        2026.<br>Trident Academy of Technology, Bhubaneswar.</p>
+                </div>
+                <div>
+                    <div class="footer-title">System</div>
+                    <div class="footer-links"><a href="product.html">System Design</a><a
+                            href="dashboard.html">Dashboard</a><a href="technology.html">Technology</a></div>
+                </div>
+                <div>
+                    <div class="footer-title">Project</div>
+                    <div class="footer-links"><a href="about.html">About</a><a href="security.html">Privacy</a><a
+                            href="branding.html">Brand</a></div>
+                </div>
+                <div>
+                    <div class="footer-title">Resources</div>
+                    <div class="footer-links"><a href="pricing.html">Pricing Model</a><a
+                            href="index.html#workflow">Workflow</a><a href="index.html#policy">Policy</a></div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <div>© 2026 AERIS – Tritthon 2026 Prototype · Trident Academy of Technology</div>
+                <div><strong>Designed &amp; Developed by Subham Kumar Mallick</strong></div>
+            </div>
+        </div>
+    </footer>
+    <script src="js/main.js"></script>
+</body>
+
+</html>
